@@ -1,1274 +1,1235 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>A-T Furniture Kano | Premium Furniture & Interior Design</title>
-
-  <meta
-    name="description"
-    content="A-T Furniture Kano - Premium furniture, living room sets, beds, wardrobes, office furniture, dining sets and interior solutions."
-  >
-
-  <meta
-    name="keywords"
-    content="A-T Furniture Kano, furniture Kano, sofas Kano, beds Kano, wardrobes Kano, office furniture Kano, interior decoration Kano"
-  >
-
-  <meta name="theme-color" content="#0a0a0a">
-
-  <style>
-    :root {
-      --gold: #d4af37;
-      --gold-light: #f2d675;
-      --black: #050505;
-      --dark: #0d0d0d;
-      --card: #151515;
-      --white: #ffffff;
-      --muted: #a7a7a7;
-      --border: #292929;
-      --green: #19c37d;
-      --red: #ef5350;
-      --cream: #f8f5ed;
-      --shadow: 0 20px 55px rgba(0,0,0,.14);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #fff;
-      color: #111;
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      width: 100%;
-      display: block;
-    }
-
-    button,
-    input,
-    textarea,
-    select {
-      font: inherit;
-    }
-
-    /* ==============================
-       HEADER
-    ============================== */
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 5000;
-      background: rgba(5,5,5,.96);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid #252525;
-    }
-
-    .nav {
-      max-width: 1320px;
-      height: 78px;
-      margin: auto;
-      padding: 0 22px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 25px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .brand-logo {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
-      background: linear-gradient(145deg, var(--gold-light), var(--gold));
-      color: #000;
-      display: grid;
-      place-items: center;
-      font-size: 20px;
-      font-weight: 900;
-      box-shadow: 0 7px 25px rgba(212,175,55,.2);
-    }
-
-    .brand-text strong {
-      display: block;
-      color: #fff;
-      font-size: 18px;
-      letter-spacing: 1px;
-    }
-
-    .brand-text span {
-      color: var(--gold);
-      font-size: 10px;
-      letter-spacing: 2px;
-      font-weight: 800;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 25px;
-      color: #ddd;
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .nav-links a {
-      transition: .2s;
-    }
-
-    .nav-links a:hover {
-      color: var(--gold);
-    }
-
-    .nav-button {
-      padding: 11px 17px;
-      border-radius: 8px;
-      background: var(--gold);
-      color: #000 !important;
-      font-weight: 800;
-    }
-
-    .menu-btn {
-      display: none;
-      width: 44px;
-      height: 44px;
-      border: 1px solid #333;
-      background: #151515;
-      color: white;
-      border-radius: 10px;
-      cursor: pointer;
-      font-size: 20px;
-    }
-
-    /* ==============================
-       HERO
-    ============================== */
-
-    .hero {
-      min-height: 720px;
-      color: white;
-      display: flex;
-      align-items: center;
-
-      background:
-        linear-gradient(
-          90deg,
-          rgba(0,0,0,.94),
-          rgba(0,0,0,.72),
-          rgba(0,0,0,.25)
-        ),
-        url("https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=2000&q=90")
-        center/cover;
-    }
-
-    .hero-inner {
-      width: min(1320px,100%);
-      margin: auto;
-      padding: 80px 22px;
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 9px 14px;
-      border: 1px solid rgba(212,175,55,.5);
-      background: rgba(212,175,55,.08);
-      border-radius: 50px;
-      color: var(--gold-light);
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 1.4px;
-      margin-bottom: 20px;
-    }
-
-    .hero h1 {
-      max-width: 850px;
-      font-size: clamp(43px,7vw,82px);
-      line-height: .99;
-      letter-spacing: -3px;
-      margin-bottom: 25px;
-    }
-
-    .hero h1 span {
-      color: var(--gold);
-    }
-
-    .hero p {
-      max-width: 670px;
-      color: #ddd;
-      font-size: 18px;
-      margin-bottom: 32px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 13px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 14px 21px;
-      border-radius: 9px;
-      border: none;
-      cursor: pointer;
-      font-weight: 800;
-      transition: .25s;
-    }
-
-    .btn-gold {
-      background: var(--gold);
-      color: #000;
-    }
-
-    .btn-gold:hover {
-      background: var(--gold-light);
-      transform: translateY(-2px);
-    }
-
-    .btn-outline {
-      color: white;
-      border: 1px solid #666;
-      background: rgba(255,255,255,.05);
-    }
-
-    .btn-outline:hover {
-      border-color: var(--gold);
-      color: var(--gold);
-    }
-
-    /* ==============================
-       STATS
-    ============================== */
-
-    .stats {
-      background: var(--black);
-      color: white;
-    }
-
-    .stats-grid {
-      max-width: 1150px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(4,1fr);
-      padding: 25px 20px;
-    }
-
-    .stat {
-      text-align: center;
-      border-right: 1px solid #272727;
-      padding: 10px;
-    }
-
-    .stat:last-child {
-      border: none;
-    }
-
-    .stat strong {
-      display: block;
-      color: var(--gold);
-      font-size: 29px;
-    }
-
-    .stat span {
-      color: #999;
-      font-size: 12px;
-    }
-
-    /* ==============================
-       GENERAL
-    ============================== */
-
-    .section {
-      padding: 90px 22px;
-    }
-
-    .section-head {
-      max-width: 750px;
-      margin: 0 auto 45px;
-      text-align: center;
-    }
-
-    .eyebrow {
-      color: #9b7914;
-      font-size: 11px;
-      letter-spacing: 2px;
-      font-weight: 900;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
-
-    .section-head h2 {
-      font-size: clamp(32px,5vw,54px);
-      line-height: 1.05;
-      margin-bottom: 14px;
-    }
-
-    .section-head p {
-      color: #666;
-    }
-
-    /* ==============================
-       CATALOGUE
-    ============================== */
-
-    .catalogue-section {
-      background: #f8f8f8;
-    }
-
-    .catalogue-tools {
-      max-width: 1320px;
-      margin: auto;
-    }
-
-    .search-row {
-      display: grid;
-      grid-template-columns: 1fr 230px;
-      gap: 12px;
-      margin-bottom: 20px;
-    }
-
-    .search-row input,
-    .search-row select {
-      width: 100%;
-      background: white;
-      border: 1px solid #ddd;
-      padding: 15px;
-      border-radius: 10px;
-      outline: none;
-    }
-
-    .search-row input:focus,
-    .search-row select:focus {
-      border-color: var(--gold);
-    }
-
-    .categories {
-      display: flex;
-      gap: 9px;
-      flex-wrap: wrap;
-      margin-bottom: 30px;
-    }
-
-    .category-btn {
-      border: 1px solid #ddd;
-      background: white;
-      color: #333;
-      border-radius: 30px;
-      padding: 9px 15px;
-      cursor: pointer;
-      font-size: 12px;
-      font-weight: 800;
-      transition: .2s;
-    }
-
-    .category-btn:hover,
-    .category-btn.active {
-      background: #111;
-      color: var(--gold);
-      border-color: #111;
-    }
-
-    .catalogue-info {
-      margin-bottom: 20px;
-      color: #666;
-      font-size: 13px;
-    }
-
-    .products {
-      max-width: 1320px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(4,1fr);
-      gap: 18px;
-    }
-
-    .product-card {
-      background: white;
-      border: 1px solid #e5e5e5;
-      border-radius: 15px;
-      overflow: hidden;
-      transition: .3s;
-      position: relative;
-    }
-
-    .product-card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow);
-    }
-
-    .product-img {
-      height: 275px;
-      background: #eee;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .product-img img {
-      height: 100%;
-      object-fit: cover;
-      transition: .45s;
-    }
-
-    .product-card:hover .product-img img {
-      transform: scale(1.07);
-    }
-
-    .product-badge {
-      position: absolute;
-      top: 12px;
-      left: 12px;
-      background: #000;
-      color: var(--gold);
-      padding: 6px 9px;
-      border-radius: 6px;
-      font-size: 10px;
-      font-weight: 900;
-      text-transform: uppercase;
-    }
-
-    .product-content {
-      padding: 17px;
-    }
-
-    .product-content small {
-      color: #9b7914;
-      font-weight: 900;
-      font-size: 10px;
-      letter-spacing: 1px;
-    }
-
-    .product-content h3 {
-      font-size: 17px;
-      margin: 5px 0;
-    }
-
-    .product-content p {
-      color: #777;
-      font-size: 12px;
-      min-height: 38px;
-    }
-
-    .product-bottom {
-      margin-top: 15px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
-    .product-price {
-      font-size: 12px;
-      font-weight: 900;
-      color: #111;
-    }
-
-    .view-product {
-      border: none;
-      background: #111;
-      color: white;
-      padding: 9px 12px;
-      border-radius: 7px;
-      cursor: pointer;
-      font-size: 11px;
-      font-weight: 800;
-    }
-
-    .view-product:hover {
-      background: var(--gold);
-      color: #000;
-    }
-
-    /* ==============================
-       ABOUT
-    ============================== */
-
-    .about {
-      background: white;
-    }
-
-    .about-grid {
-      max-width: 1250px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    .about-image {
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-    }
-
-    .about-image img {
-      height: 520px;
-      object-fit: cover;
-    }
-
-    .about-content h2 {
-      font-size: clamp(34px,5vw,55px);
-      line-height: 1.05;
-      margin-bottom: 20px;
-    }
-
-    .about-content p {
-      color: #666;
-      margin-bottom: 15px;
-    }
-
-    .check-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-top: 25px;
-    }
-
-    .check {
-      padding: 15px;
-      border: 1px solid #e4e4e4;
-      border-radius: 10px;
-      background: #fafafa;
-    }
-
-    .check strong {
-      display: block;
-      margin-bottom: 3px;
-    }
-
-    .check span {
-      color: #777;
-      font-size: 12px;
-    }
-
-    /* ==============================
-       SERVICES
-    ============================== */
-
-    .services {
-      background: #f7f5ef;
-    }
-
-    .service-grid {
-      max-width: 1200px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 18px;
-    }
-
-    .service {
-      background: white;
-      border: 1px solid #e5e0d5;
-      padding: 30px;
-      border-radius: 15px;
-      transition: .25s;
-    }
-
-    .service:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow);
-    }
-
-    .service-icon {
-      width: 55px;
-      height: 55px;
-      background: #111;
-      color: var(--gold);
-      display: grid;
-      place-items: center;
-      border-radius: 12px;
-      font-size: 23px;
-      margin-bottom: 18px;
-    }
-
-    .service h3 {
-      margin-bottom: 8px;
-    }
-
-    .service p {
-      color: #6d6d6d;
-      font-size: 13px;
-    }
-
-    /* ==============================
-       GALLERY
-    ============================== */
-
-    .gallery-grid {
-      max-width: 1250px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1.4fr 1fr 1fr;
-      grid-auto-rows: 220px;
-      gap: 14px;
-    }
-
-    .gallery-item {
-      overflow: hidden;
-      border-radius: 13px;
-      position: relative;
-    }
-
-    .gallery-item:first-child {
-      grid-row: span 2;
-    }
-
-    .gallery-item img {
-      height: 100%;
-      object-fit: cover;
-      transition: .4s;
-    }
-
-    .gallery-item:hover img {
-      transform: scale(1.06);
-    }
-
-    /* ==============================
-       WHY US
-    ============================== */
-
-    .why {
-      background: #080808;
-      color: white;
-    }
-
-    .why .section-head p {
-      color: #999;
-    }
-
-    .why-grid {
-      max-width: 1150px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 18px;
-    }
-
-    .why-card {
-      padding: 30px;
-      background: #121212;
-      border: 1px solid #292929;
-      border-radius: 15px;
-    }
-
-    .why-number {
-      color: var(--gold);
-      font-size: 27px;
-      font-weight: 900;
-    }
-
-    .why-card h3 {
-      margin: 12px 0 7px;
-    }
-
-    .why-card p {
-      color: #999;
-      font-size: 13px;
-    }
-
-    /* ==============================
-       CTA
-    ============================== */
-
-    .cta {
-      background:
-        linear-gradient(120deg,#080808,#17120a);
-      color: white;
-      text-align: center;
-      padding: 90px 22px;
-    }
-
-    .cta h2 {
-      max-width: 750px;
-      margin: auto auto 15px;
-      font-size: clamp(35px,5vw,60px);
-      line-height: 1.05;
-    }
-
-    .cta p {
-      max-width: 620px;
-      margin: auto auto 28px;
-      color: #aaa;
-    }
-
-    /* ==============================
-       TESTIMONIALS
-    ============================== */
-
-    .testimonials {
-      max-width: 1150px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 18px;
-    }
-
-    .testimonial {
-      padding: 25px;
-      background: #f7f7f7;
-      border: 1px solid #e6e6e6;
-      border-radius: 14px;
-    }
-
-    .stars {
-      color: var(--gold);
-      letter-spacing: 2px;
-      margin-bottom: 12px;
-    }
-
-    .testimonial p {
-      color: #555;
-      font-size: 13px;
-      margin-bottom: 15px;
-    }
-
-    .testimonial small {
-      color: #888;
-    }
-
-    /* ==============================
-       FAQ
-    ============================== */
-
-    .faq {
-      max-width: 800px;
-      margin: auto;
-    }
-
-    details {
-      border-bottom: 1px solid #ddd;
-      padding: 20px 0;
-    }
-
-    summary {
-      cursor: pointer;
-      font-weight: 800;
-      padding-right: 30px;
-      position: relative;
-      list-style: none;
-    }
-
-    summary::after {
-      content: "+";
-      position: absolute;
-      right: 0;
-      color: #9b7914;
-      font-size: 22px;
-    }
-
-    details[open] summary::after {
-      content: "−";
-    }
-
-    details p {
-      padding-top: 10px;
-      color: #666;
-    }
-
-    /* ==============================
-       CONTACT
-    ============================== */
-
-    .contact {
-      background: #f4f1e9;
-    }
-
-    .contact-grid {
-      max-width: 1150px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 45px;
-      align-items: start;
-    }
-
-    .contact-content h2 {
-      font-size: clamp(35px,5vw,55px);
-      line-height: 1.05;
-      margin-bottom: 18px;
-    }
-
-    .contact-content > p {
-      color: #666;
-      margin-bottom: 25px;
-    }
-
-    .contact-item {
-      border-bottom: 1px solid #ddd;
-      padding: 15px 0;
-    }
-
-    .contact-item span {
-      display: block;
-      color: #927115;
-      font-size: 10px;
-      letter-spacing: 1px;
-      font-weight: 900;
-      text-transform: uppercase;
-    }
-
-    .contact-form {
-      background: white;
-      padding: 30px;
-      border-radius: 17px;
-      box-shadow: var(--shadow);
-    }
-
-    .contact-form h3 {
-      font-size: 25px;
-      margin-bottom: 20px;
-    }
-
-    .form-group {
-      margin-bottom: 14px;
-    }
-
-    .form-group label {
-      display: block;
-      font-size: 12px;
-      font-weight: 800;
-      margin-bottom: 6px;
-    }
-
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-      width: 100%;
-      border: 1px solid #ddd;
-      padding: 13px;
-      border-radius: 8px;
-      outline: none;
-    }
-
-    .form-group textarea {
-      min-height: 120px;
-      resize: vertical;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus,
-    .form-group select:focus {
-      border-color: var(--gold);
-    }
-
-    .submit-btn {
-      width: 100%;
-      padding: 14px;
-      border: none;
-      border-radius: 8px;
-      background: #111;
-      color: var(--gold);
-      font-weight: 900;
-      cursor: pointer;
-    }
-
-    .submit-btn:hover {
-      background: var(--gold);
-      color: #000;
-    }
-
-    /* ==============================
-       FOOTER
-    ============================== */
-
-    footer {
-      background: #050505;
-      color: white;
-      padding: 50px 22px 25px;
-    }
-
-    .footer-grid {
-      max-width: 1250px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr 1fr;
-      gap: 35px;
-      padding-bottom: 35px;
-    }
-
-    footer h3 {
-      margin-bottom: 13px;
-    }
-
-    footer p,
-    footer a {
-      color: #999;
-      font-size: 13px;
-    }
-
-    footer a {
-      display: block;
-      margin-bottom: 8px;
-    }
-
-    footer a:hover {
-      color: var(--gold);
-    }
-
-    .copyright {
-      max-width: 1250px;
-      margin: auto;
-      padding-top: 20px;
-      border-top: 1px solid #222;
-      display: flex;
-      justify-content: space-between;
-      gap: 15px;
-      flex-wrap: wrap;
-      color: #666;
-      font-size: 11px;
-    }
-
-    /* ==============================
-       WHATSAPP
-    ============================== */
-
-    .whatsapp {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      z-index: 6000;
-      width: 58px;
-      height: 58px;
-      display: grid;
-      place-items: center;
-      border-radius: 50%;
-      background: #25d366;
-      color: white;
-      font-size: 26px;
-      box-shadow: 0 12px 35px rgba(0,0,0,.3);
-      transition: .25s;
-    }
-
-    .whatsapp:hover {
-      transform: scale(1.08);
-    }
-
-    /* ==============================
-       MODAL
-    ============================== */
-
-    .modal {
-      display: none;
-      position: fixed;
-      inset: 0;
-      z-index: 10000;
-      background: rgba(0,0,0,.82);
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-
-    .modal.show {
-      display: flex;
-    }
-
-    .modal-box {
-      width: min(900px,100%);
-      max-height: 90vh;
-      overflow-y: auto;
-      background: white;
-      border-radius: 18px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .modal-image {
-      min-height: 480px;
-    }
-
-    .modal-image img {
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .modal-info {
-      padding: 35px;
-    }
-
-    .modal-info small {
-      color: #927115;
-      text-transform: uppercase;
-      font-weight: 900;
-      letter-spacing: 1px;
-    }
-
-    .modal-info h2 {
-      font-size: 33px;
-      line-height: 1.1;
-      margin: 10px 0;
-    }
-
-    .modal-info p {
-      color: #666;
-      margin: 18px 0 25px;
-    }
-
-    .close-modal {
-      position: absolute;
-      top: 13px;
-      right: 13px;
-      width: 40px;
-      height: 40px;
-      border: none;
-      border-radius: 50%;
-      background: rgba(0,0,0,.8);
-      color: white;
-      cursor: pointer;
-      font-size: 22px;
-      z-index: 5;
-    }
-
-    /* ==============================
-       RESPONSIVE
-    ============================== */
-
-    @media(max-width:1050px) {
-
-      .products {
-        grid-template-columns: repeat(3,1fr);
-      }
-
-      .footer-grid {
-        grid-template-columns: repeat(2,1fr);
-      }
-
-    }
-
-    @media(max-width:800px) {
-
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 73px;
-        left: 15px;
-        right: 15px;
-        background: #111;
-        border: 1px solid #292929;
-        border-radius: 13px;
-        padding: 12px;
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .nav-links.show {
-        display: flex;
-      }
-
-      .nav-links a {
-        padding: 11px;
-      }
-
-      .menu-btn {
-        display: block;
-      }
-
-      .stats-grid {
-        grid-template-columns: repeat(2,1fr);
-      }
-
-      .stat {
-        border: none;
-      }
-
-      .products {
-        grid-template-columns: repeat(2,1fr);
-      }
-
-      .about-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .service-grid,
-      .why-grid,
-      .testimonials {
-        grid-template-columns: 1fr;
-      }
-
-      .gallery-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .gallery-item:first-child {
-        grid-row: span 1;
-      }
-
-      .modal-box {
-        grid-template-columns: 1fr;
-      }
-
-      .modal-image {
-        min-height: 300px;
-      }
-
-    }
-
-    @media(max-width:540px) {
-
-      .nav {
-        padding: 0 15px;
-      }
-
-      .hero {
-        min-height: 650px;
-      }
-
-      .hero-inner {
-        padding: 60px 18px;
-      }
-
-      .hero h1 {
-        font-size: 47px;
-        letter-spacing: -2px;
-      }
-
-      .hero p {
-        font-size: 15px;
-      }
-
-      .section {
-        padding: 65px 17px;
-      }
-
-      .search-row {
-        grid-template-columns: 1fr;
-      }
-
-      .products {
-        grid-template-columns: 1fr;
-      }
-
-      .product-img {
-        height: 330px;
-      }
-
-      .check-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .gallery-grid {
-        grid-template-columns: 1fr;
-        grid-auto-rows: 260px;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .copyright {
-        flex-direction: column;
-      }
-
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A-T Furniture Kano | Royal Furniture & Interior Design</title>
+
+<meta name="description" content="A-T Furniture Kano - Premium royal chairs, royal beds, sofas, wardrobes, dining sets, office furniture and custom furniture designs.">
+<meta name="keywords" content="A-T Furniture Kano, Royal Chairs Kano, Royal Beds Kano, Furniture Kano, Sofa Kano, Wardrobe Kano, Interior Furniture">
+<meta name="theme-color" content="#111111">
+
+<style>
+:root{
+  --black:#090909;
+  --dark:#111111;
+  --dark2:#181818;
+  --ash:#8f9499;
+  --ashLight:#d9dde0;
+  --white:#ffffff;
+  --gold:#c99a28;
+  --gold2:#f0c75e;
+  --goldDark:#806116;
+  --border:rgba(255,255,255,.10);
+  --green:#20c997;
+  --shadow:0 20px 60px rgba(0,0,0,.35);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--black);
+  color:var(--white);
+  line-height:1.6;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button,input,select{
+  font:inherit;
+}
+
+img{
+  width:100%;
+  display:block;
+}
+
+.container{
+  width:min(1180px,92%);
+  margin:auto;
+}
+
+/* ================= HEADER ================= */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(9,9,9,.95);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--border);
+}
+
+.nav{
+  height:78px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-weight:900;
+  font-size:21px;
+  letter-spacing:.5px;
+}
+
+.logo-mark{
+  width:43px;
+  height:43px;
+  border-radius:12px;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(135deg,var(--gold),var(--goldDark));
+  color:#111;
+  font-weight:1000;
+  box-shadow:0 8px 25px rgba(201,154,40,.25);
+}
+
+.logo span{
+  color:var(--gold2);
+}
+
+.nav-links{
+  display:flex;
+  gap:24px;
+  align-items:center;
+}
+
+.nav-links a{
+  color:#ddd;
+  font-size:14px;
+  font-weight:600;
+}
+
+.nav-links a:hover{
+  color:var(--gold2);
+}
+
+.nav-cta{
+  padding:11px 17px;
+  border-radius:10px;
+  background:var(--gold);
+  color:#111!important;
+  font-weight:900!important;
+}
+
+.menu{
+  display:none;
+  border:1px solid var(--border);
+  background:#151515;
+  color:white;
+  width:43px;
+  height:43px;
+  border-radius:10px;
+  cursor:pointer;
+  font-size:20px;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  min-height:700px;
+  display:flex;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 85% 20%,rgba(201,154,40,.20),transparent 30%),
+    radial-gradient(circle at 15% 80%,rgba(143,148,153,.12),transparent 28%),
+    linear-gradient(135deg,#090909,#151515);
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+
+.badge{
+  display:inline-flex;
+  padding:8px 13px;
+  border:1px solid rgba(240,199,94,.35);
+  background:rgba(201,154,40,.08);
+  color:var(--gold2);
+  border-radius:999px;
+  font-size:12px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  margin-bottom:20px;
+}
+
+.hero h1{
+  font-size:clamp(43px,6vw,78px);
+  line-height:1.02;
+  letter-spacing:-3px;
+  margin-bottom:22px;
+}
+
+.hero h1 span{
+  color:var(--gold2);
+}
+
+.hero p{
+  max-width:600px;
+  color:#c7c7c7;
+  font-size:17px;
+  margin-bottom:30px;
+}
+
+.hero-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:13px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:14px 20px;
+  border-radius:11px;
+  border:1px solid var(--border);
+  cursor:pointer;
+  font-weight:800;
+  transition:.25s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+.btn-primary{
+  background:var(--gold);
+  color:#111;
+  border-color:var(--gold);
+}
+
+.btn-secondary{
+  background:#191919;
+  color:white;
+}
+
+.hero-showcase{
+  position:relative;
+  min-height:480px;
+  display:grid;
+  place-items:center;
+}
+
+.hero-main-card{
+  width:min(480px,100%);
+  background:#151515;
+  padding:12px;
+  border:1px solid rgba(240,199,94,.3);
+  border-radius:25px;
+  box-shadow:var(--shadow);
+  transform:rotate(2deg);
+}
+
+.hero-main-card img{
+  height:450px;
+  object-fit:cover;
+  border-radius:18px;
+}
+
+.floating-card{
+  position:absolute;
+  background:rgba(20,20,20,.94);
+  border:1px solid var(--border);
+  border-radius:15px;
+  padding:14px;
+  box-shadow:var(--shadow);
+}
+
+.floating-card strong{
+  display:block;
+  color:var(--gold2);
+}
+
+.floating-one{
+  left:0;
+  bottom:55px;
+}
+
+.floating-two{
+  right:-5px;
+  top:45px;
+}
+
+/* ================= STATS ================= */
+
+.stats{
+  background:#111;
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+}
+
+.stat{
+  padding:27px 20px;
+  text-align:center;
+  border-right:1px solid var(--border);
+}
+
+.stat:last-child{
+  border-right:0;
+}
+
+.stat strong{
+  display:block;
+  font-size:28px;
+  color:var(--gold2);
+}
+
+.stat span{
+  color:#aaa;
+  font-size:13px;
+}
+
+/* ================= SECTION ================= */
+
+section{
+  padding:90px 0;
+}
+
+.section-head{
+  max-width:750px;
+  margin-bottom:35px;
+}
+
+.section-head .eyebrow{
+  color:var(--gold2);
+  font-weight:900;
+  font-size:12px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.section-head h2{
+  font-size:clamp(32px,4vw,50px);
+  line-height:1.1;
+  margin:10px 0 14px;
+}
+
+.section-head p{
+  color:#aaa;
+}
+
+/* ================= CATEGORY ================= */
+
+.category-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:14px;
+}
+
+.category{
+  background:linear-gradient(145deg,#171717,#101010);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:21px;
+  cursor:pointer;
+  transition:.25s;
+}
+
+.category:hover,
+.category.active{
+  border-color:var(--gold);
+  transform:translateY(-4px);
+}
+
+.category-icon{
+  font-size:28px;
+  margin-bottom:10px;
+}
+
+.category strong{
+  display:block;
+}
+
+.category small{
+  color:#888;
+}
+
+/* ================= CATALOGUE ================= */
+
+.catalogue{
+  background:#0d0d0d;
+}
+
+.toolbar{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:25px;
+}
+
+.search{
+  flex:1;
+  min-width:240px;
+  position:relative;
+}
+
+.search input{
+  width:100%;
+  padding:15px 17px;
+  border-radius:12px;
+  background:#161616;
+  color:white;
+  border:1px solid var(--border);
+  outline:none;
+}
+
+.search input:focus{
+  border-color:var(--gold);
+}
+
+select{
+  background:#161616;
+  color:white;
+  border:1px solid var(--border);
+  padding:15px;
+  border-radius:12px;
+  outline:none;
+}
+
+.filter-buttons{
+  display:flex;
+  gap:8px;
+  overflow:auto;
+  padding-bottom:7px;
+  margin-bottom:25px;
+}
+
+.filter-buttons button{
+  white-space:nowrap;
+  padding:10px 14px;
+  background:#161616;
+  color:#bbb;
+  border:1px solid var(--border);
+  border-radius:999px;
+  cursor:pointer;
+}
+
+.filter-buttons button.active{
+  background:var(--gold);
+  color:#111;
+  border-color:var(--gold);
+  font-weight:900;
+}
+
+.catalogue-info{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  align-items:center;
+  margin-bottom:20px;
+  color:#aaa;
+  font-size:14px;
+}
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.product{
+  background:#151515;
+  border:1px solid var(--border);
+  border-radius:18px;
+  overflow:hidden;
+  transition:.25s;
+}
+
+.product:hover{
+  transform:translateY(-6px);
+  border-color:rgba(240,199,94,.5);
+  box-shadow:0 18px 50px rgba(0,0,0,.25);
+}
+
+.product-image{
+  height:245px;
+  position:relative;
+  overflow:hidden;
+  background:#ddd;
+}
+
+.product-image img{
+  height:100%;
+  object-fit:cover;
+  transition:.5s;
+}
+
+.product:hover .product-image img{
+  transform:scale(1.06);
+}
+
+.product-badge{
+  position:absolute;
+  left:12px;
+  top:12px;
+  background:#111;
+  color:var(--gold2);
+  border:1px solid rgba(240,199,94,.4);
+  border-radius:999px;
+  padding:6px 9px;
+  font-size:10px;
+  font-weight:900;
+}
+
+.product-number{
+  position:absolute;
+  right:12px;
+  top:12px;
+  background:rgba(0,0,0,.7);
+  padding:5px 8px;
+  border-radius:7px;
+  font-size:10px;
+}
+
+.product-body{
+  padding:17px;
+}
+
+.product-category{
+  color:var(--gold2);
+  font-size:11px;
+  font-weight:900;
+  text-transform:uppercase;
+}
+
+.product h3{
+  font-size:17px;
+  margin:5px 0 7px;
+}
+
+.product p{
+  color:#888;
+  font-size:12px;
+  min-height:39px;
+}
+
+.product-meta{
+  display:flex;
+  justify-content:space-between;
+  gap:8px;
+  margin:14px 0;
+  font-size:12px;
+}
+
+.color-dot{
+  display:inline-block;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  margin-right:5px;
+  border:1px solid #888;
+}
+
+.product-actions{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+
+.product-actions button{
+  padding:10px 7px;
+  border-radius:9px;
+  cursor:pointer;
+  border:1px solid var(--border);
+  background:#202020;
+  color:white;
+  font-size:12px;
+  font-weight:800;
+}
+
+.product-actions .wa{
+  background:#176b4e;
+  border-color:#176b4e;
+}
+
+.load-more{
+  display:block;
+  margin:30px auto 0;
+}
+
+/* ================= FEATURE ================= */
+
+.feature-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+}
+
+.feature-card{
+  min-height:300px;
+  border:1px solid var(--border);
+  border-radius:22px;
+  overflow:hidden;
+  position:relative;
+  background:#151515;
+}
+
+.feature-card img{
+  height:100%;
+  min-height:300px;
+  object-fit:cover;
+  opacity:.7;
+}
+
+.feature-content{
+  position:absolute;
+  inset:auto 0 0 0;
+  padding:30px;
+  background:linear-gradient(transparent,rgba(0,0,0,.95));
+}
+
+.feature-content h3{
+  font-size:27px;
+  margin-bottom:7px;
+}
+
+.feature-content p{
+  color:#bbb;
+}
+
+/* ================= ABOUT ================= */
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:55px;
+  align-items:center;
+}
+
+.about-image{
+  border-radius:25px;
+  overflow:hidden;
+  border:1px solid var(--border);
+}
+
+.about-image img{
+  height:500px;
+  object-fit:cover;
+}
+
+.about-text h2{
+  font-size:45px;
+  line-height:1.1;
+  margin:10px 0 20px;
+}
+
+.about-text p{
+  color:#aaa;
+  margin-bottom:18px;
+}
+
+.check-list{
+  display:grid;
+  gap:12px;
+  margin:25px 0;
+}
+
+.check{
+  display:flex;
+  gap:10px;
+  color:#ddd;
+}
+
+.check b{
+  color:var(--gold2);
+}
+
+/* ================= SERVICES ================= */
+
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:17px;
+}
+
+.service{
+  background:#151515;
+  border:1px solid var(--border);
+  padding:25px;
+  border-radius:18px;
+}
+
+.service-icon{
+  font-size:30px;
+  margin-bottom:12px;
+}
+
+.service h3{
+  margin-bottom:8px;
+}
+
+.service p{
+  color:#999;
+  font-size:14px;
+}
+
+/* ================= WHY ================= */
+
+.why{
+  background:#121212;
+}
+
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+}
+
+.why-card{
+  padding:24px;
+  border:1px solid var(--border);
+  border-radius:17px;
+  background:#171717;
+}
+
+.why-card strong{
+  display:block;
+  color:var(--gold2);
+  font-size:18px;
+  margin-bottom:7px;
+}
+
+.why-card p{
+  color:#999;
+  font-size:13px;
+}
+
+/* ================= CTA ================= */
+
+.cta{
+  padding:30px 0 90px;
+}
+
+.cta-box{
+  border:1px solid rgba(240,199,94,.25);
+  background:
+    radial-gradient(circle at 90% 10%,rgba(240,199,94,.15),transparent 30%),
+    linear-gradient(135deg,#171717,#0d0d0d);
+  padding:55px;
+  border-radius:28px;
+  text-align:center;
+}
+
+.cta-box h2{
+  font-size:clamp(30px,5vw,55px);
+  line-height:1.05;
+  margin-bottom:15px;
+}
+
+.cta-box p{
+  color:#aaa;
+  max-width:650px;
+  margin:0 auto 25px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+}
+
+.contact-card{
+  padding:30px;
+  background:#151515;
+  border:1px solid var(--border);
+  border-radius:20px;
+}
+
+.contact-card h3{
+  margin-bottom:15px;
+  font-size:24px;
+}
+
+.contact-item{
+  display:flex;
+  gap:13px;
+  margin:17px 0;
+}
+
+.contact-item .icon{
+  width:40px;
+  height:40px;
+  border-radius:10px;
+  display:grid;
+  place-items:center;
+  background:#222;
+  color:var(--gold2);
+}
+
+.contact-item span{
+  color:#999;
+  font-size:12px;
+  display:block;
+}
+
+.contact-item strong{
+  font-size:14px;
+}
+
+form{
+  display:grid;
+  gap:12px;
+}
+
+form input,
+form textarea{
+  width:100%;
+  padding:14px;
+  border:1px solid var(--border);
+  background:#101010;
+  color:white;
+  border-radius:10px;
+  outline:none;
+}
+
+form textarea{
+  min-height:130px;
+  resize:vertical;
+}
+
+form input:focus,
+form textarea:focus{
+  border-color:var(--gold);
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  background:#050505;
+  border-top:1px solid var(--border);
+  padding:50px 0 25px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:35px;
+}
+
+.footer-brand p{
+  color:#888;
+  max-width:380px;
+  margin-top:15px;
+}
+
+.footer-col h4{
+  margin-bottom:15px;
+  color:var(--gold2);
+}
+
+.footer-col a{
+  display:block;
+  color:#888;
+  font-size:13px;
+  margin:9px 0;
+}
+
+.footer-col a:hover{
+  color:white;
+}
+
+.copyright{
+  margin-top:40px;
+  padding-top:20px;
+  border-top:1px solid var(--border);
+  color:#666;
+  font-size:12px;
+  text-align:center;
+}
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  z-index:900;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:#1aae72;
+  color:white;
+  font-size:26px;
+  box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+/* ================= MODAL ================= */
+
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.82);
+  backdrop-filter:blur(8px);
+  z-index:2000;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+
+.modal.show{
+  display:flex;
+}
+
+.modal-box{
+  width:min(900px,100%);
+  max-height:90vh;
+  overflow:auto;
+  background:#151515;
+  border:1px solid var(--border);
+  border-radius:22px;
+  position:relative;
+}
+
+.close{
+  position:absolute;
+  right:15px;
+  top:15px;
+  z-index:5;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  border:1px solid var(--border);
+  background:#111;
+  color:white;
+  cursor:pointer;
+  font-size:18px;
+}
+
+.modal-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+}
+
+.modal-image{
+  min-height:500px;
+}
+
+.modal-image img{
+  height:100%;
+  min-height:500px;
+  object-fit:cover;
+}
+
+.modal-content{
+  padding:40px;
+}
+
+.modal-content .tag{
+  color:var(--gold2);
+  font-weight:900;
+  font-size:12px;
+}
+
+.modal-content h2{
+  font-size:35px;
+  line-height:1.1;
+  margin:8px 0 15px;
+}
+
+.modal-content p{
+  color:#aaa;
+  margin-bottom:20px;
+}
+
+.details{
+  display:grid;
+  gap:12px;
+  margin:20px 0;
+}
+
+.detail{
+  padding:12px;
+  background:#1d1d1d;
+  border-radius:9px;
+  font-size:13px;
+}
+
+.detail b{
+  color:#ddd;
+}
+
+/* ================= TOAST ================= */
+
+.toast{
+  position:fixed;
+  left:50%;
+  bottom:25px;
+  transform:translate(-50%,120px);
+  background:#222;
+  color:white;
+  border:1px solid var(--border);
+  padding:13px 18px;
+  border-radius:10px;
+  z-index:3000;
+  transition:.3s;
+}
+
+.toast.show{
+  transform:translate(-50%,0);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1000px){
+
+  .products{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .category-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .why-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:780px){
+
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:78px;
+    left:0;
+    right:0;
+    background:#0c0c0c;
+    border-bottom:1px solid var(--border);
+    padding:20px;
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .nav-links.open{
+    display:flex;
+  }
+
+  .menu{
+    display:block;
+  }
+
+  .hero{
+    min-height:auto;
+    padding:70px 0;
+  }
+
+  .hero-grid,
+  .about-grid,
+  .contact-grid,
+  .feature-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero-showcase{
+    min-height:400px;
+  }
+
+  .stats-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .stat:nth-child(2){
+    border-right:0;
+  }
+
+  .stat{
+    border-bottom:1px solid var(--border);
+  }
+
+  .products{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .category-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .service-grid{
+    grid-template-columns:1fr;
+  }
+
+  .modal-grid{
+    grid-template-columns:1fr;
+  }
+
+  .modal-image,
+  .modal-image img{
+    min-height:320px;
+    height:320px;
+  }
+}
+
+@media(max-width:520px){
+
+  .container{
+    width:94%;
+  }
+
+  section{
+    padding:65px 0;
+  }
+
+  .hero h1{
+    letter-spacing:-2px;
+  }
+
+  .products{
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+  }
+
+  .product-image{
+    height:190px;
+  }
+
+  .product-body{
+    padding:12px;
+  }
+
+  .product h3{
+    font-size:14px;
+  }
+
+  .product p{
+    font-size:11px;
+  }
+
+  .product-actions{
+    grid-template-columns:1fr;
+  }
+
+  .category-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .why-grid{
+    grid-template-columns:1fr;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+
+  .cta-box{
+    padding:35px 20px;
+  }
+
+  .floating-card{
+    font-size:11px;
+  }
+
+  .floating-two{
+    right:0;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- =====================================
-       HEADER
-  ====================================== -->
+<!-- ================= HEADER ================= -->
 
-  <header>
+<header>
+  <div class="container nav">
 
-    <nav class="nav">
+    <a href="#home" class="logo">
+      <div class="logo-mark">AT</div>
+      <div>A-T <span>FURNITURE</span></div>
+    </a>
 
-      <a href="#home" class="brand">
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#categories">Categories</a>
+      <a href="#catalogue">Catalogue</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
 
-        <div class="brand-logo">
-          AT
-        </div>
-
-        <div class="brand-text">
-          <strong>A-T FURNITURE</strong>
-          <span>KANO • INTERIORS</span>
-        </div>
-
+      <a class="nav-cta"
+         href="https://wa.me/2348038898410?text=Assalamu%20Alaikum%20A-T%20Furniture%20Kano%2C%20I%20want%20to%20make%20an%20enquiry."
+         target="_blank">
+        WhatsApp
       </a>
-
-      <div class="nav-links" id="navLinks">
-
-        <a href="#home">Home</a>
-        <a href="#catalogue">Catalogue</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact" class="nav-button">Get In Touch</a>
-
-      </div>
-
-      <button class="menu-btn" id="menuBtn">
-        ☰
-      </button>
-
     </nav>
 
-  </header>
+    <button class="menu" id="menuBtn">☰</button>
 
+  </div>
+</header>
 
-  <!-- =====================================
-       HERO
-  ====================================== -->
+<!-- ================= HERO ================= -->
 
-  <section class="hero" id="home">
+<section class="hero" id="home">
 
-    <div class="hero-inner">
+  <div class="container hero-grid">
 
-      <div class="hero-badge">
-        ✦ PREMIUM FURNITURE • KANO
+    <div>
+
+      <div class="badge">
+        Premium Royal Furniture Collection
       </div>
 
       <h1>
-        Furniture That
-        <span>Defines</span>
-        Your Space.
+        Furniture With
+        <span>Royal Character.</span>
       </h1>
 
       <p>
-        Discover premium furniture collections designed for
-        modern homes, offices, hotels and beautiful interiors.
-        Explore our growing catalogue and contact us directly
-        for enquiries and orders.
+        Discover premium royal chairs, royal beds, luxury sofas,
+        wardrobes, dining sets, office furniture and custom interior
+        designs from A-T Furniture Kano.
       </p>
 
-      <div class="hero-actions">
+      <div class="hero-buttons">
 
-        <a href="#catalogue" class="btn btn-gold">
-          Explore 2,000+ Designs →
+        <a href="#catalogue" class="btn btn-primary">
+          Explore Catalogue
         </a>
 
         <a
-          href="https://wa.me/2348038898410?text=Hello%20A-T%20Furniture%20Kano,%20I%20would%20like%20to%20make%20an%20enquiry."
+          href="https://wa.me/2348038898410?text=Assalamu%20Alaikum%20A-T%20Furniture%20Kano%2C%20I%20want%20to%20see%20your%20furniture%20collection."
           target="_blank"
-          class="btn btn-outline"
-        >
+          class="btn btn-secondary">
           WhatsApp Us
         </a>
 
@@ -1276,1165 +1237,187 @@
 
     </div>
 
-  </section>
+    <div class="hero-showcase">
 
+      <div class="hero-main-card">
 
-  <!-- =====================================
-       STATS
-  ====================================== -->
+        <img
+          src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1000&q=85"
+          alt="Luxury Royal Sofa">
 
-  <section class="stats">
-
-    <div class="stats-grid">
-
-      <div class="stat">
-        <strong>2,000+</strong>
-        <span>Furniture Designs</span>
       </div>
 
-      <div class="stat">
-        <strong>10+</strong>
-        <span>Categories</span>
+      <div class="floating-card floating-one">
+        <strong>2,000+ Designs</strong>
+        <small>Premium catalogue</small>
       </div>
 
-      <div class="stat">
-        <strong>Premium</strong>
-        <span>Quality Focus</span>
-      </div>
-
-      <div class="stat">
-        <strong>Kano</strong>
-        <span>Based Business</span>
+      <div class="floating-card floating-two">
+        <strong>Royal Collection</strong>
+        <small>Custom furniture</small>
       </div>
 
     </div>
 
-  </section>
+  </div>
 
+</section>
 
-  <!-- =====================================
-       CATALOGUE
-  ====================================== -->
+<!-- ================= STATS ================= -->
 
-  <section class="section catalogue-section" id="catalogue">
+<div class="stats">
+
+  <div class="container stats-grid">
+
+    <div class="stat">
+      <strong>2,000+</strong>
+      <span>Furniture Designs</span>
+    </div>
+
+    <div class="stat">
+      <strong>9+</strong>
+      <span>Major Categories</span>
+    </div>
+
+    <div class="stat">
+      <strong>100%</strong>
+      <span>Custom Design Focus</span>
+    </div>
+
+    <div class="stat">
+      <strong>Kano</strong>
+      <span>Based Furniture Brand</span>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- ================= CATEGORIES ================= -->
+
+<section id="categories">
+
+  <div class="container">
 
     <div class="section-head">
-
-      <div class="eyebrow">
-        Furniture Catalogue
-      </div>
-
-      <h2>
-        Explore Our Collection
-      </h2>
-
+      <div class="eyebrow">Explore Collection</div>
+      <h2>Royal Designs For Every Space</h2>
       <p>
-        Browse thousands of furniture design samples.
-        Search by name or filter by category.
+        Choose from different furniture styles, shapes, finishes and
+        colour combinations.
       </p>
-
     </div>
 
+    <div class="category-grid" id="categoryGrid"></div>
 
-    <div class="catalogue-tools">
+  </div>
 
-      <div class="search-row">
+</section>
 
+<!-- ================= CATALOGUE ================= -->
+
+<section class="catalogue" id="catalogue">
+
+  <div class="container">
+
+    <div class="section-head">
+      <div class="eyebrow">A-T Furniture Catalogue</div>
+      <h2>Premium Furniture Collection</h2>
+      <p>
+        Browse thousands of design combinations. Use search and filters
+        to find the style you want.
+      </p>
+    </div>
+
+    <div class="toolbar">
+
+      <div class="search">
         <input
-          type="search"
           id="searchInput"
-          placeholder="Search sofa, bed, wardrobe, office..."
+          type="search"
+          placeholder="Search royal chair, bed, sofa, wardrobe..."
         >
-
-        <select id="sortSelect">
-
-          <option value="default">
-            Sort Catalogue
-          </option>
-
-          <option value="az">
-            Name A-Z
-          </option>
-
-          <option value="za">
-            Name Z-A
-          </option>
-
-        </select>
-
       </div>
 
-
-      <div class="categories">
-
-        <button
-          class="category-btn active"
-          data-category="all"
-        >
-          All Furniture
-        </button>
-
-        <button
-          class="category-btn"
-          data-category="sofa"
-        >
-          Sofas
-        </button>
-
-        <button
-          class="category-btn"
-          data-category="bed"
-        >
-          Beds
-        </button>
-
-        <button
-          class="category-btn"
-          data-category="wardrobe"
-        >
-          Wardrobes
-        </button>
-
-        <button
-          class="category-btn"
-          data-category="dining"
-        >
-          Dining
-        </button>
-
-        <button
-          class="category-btn"
-          data-category="office"
-        >
-          Office
-        </button>
-
-        <button
-          class="category-btn"
-          data-category="tv"
-        >
-          TV Units
-        </button>
-
-        <button
-          class="category-btn"
-          data-category="chair"
-        >
-          Chairs
-        </button>
-
-        <button
-          class="category-btn"
-          data-category="table"
-        >
-          Tables
-        </button>
-
-        <button
-          class="category-btn"
-          data-category="outdoor"
-        >
-          Outdoor
-        </button>
-
-      </div>
-
-
-      <div class="catalogue-info">
-        Showing <strong id="resultCount">0</strong>
-        furniture designs
-      </div>
+      <select id="sortSelect">
+        <option value="default">Sort: Featured</option>
+        <option value="az">Name A-Z</option>
+        <option value="za">Name Z-A</option>
+        <option value="category">Category</option>
+      </select>
 
     </div>
 
+    <div class="filter-buttons" id="filters"></div>
+
+    <div class="catalogue-info">
+
+      <span id="resultText">
+        Loading collection...
+      </span>
+
+      <span>
+        Contact us for current price
+      </span>
+
+    </div>
 
     <div class="products" id="products"></div>
 
-  </section>
+    <button class="btn btn-primary load-more" id="loadMore">
+      Load More Designs
+    </button>
 
+  </div>
 
-  <!-- =====================================
-       ABOUT
-  ====================================== -->
+</section>
 
-  <section class="section about" id="about">
+<!-- ================= FEATURED ROYAL ================= -->
 
-    <div class="about-grid">
+<section>
 
-      <div class="about-image">
-
-        <img
-          src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1300&q=90"
-          alt="A-T Furniture modern sofa"
-          loading="lazy"
-        >
-
-      </div>
-
-
-      <div class="about-content">
-
-        <div class="eyebrow">
-          About A-T Furniture
-        </div>
-
-        <h2>
-          We Build Spaces
-          People Love To Live In.
-        </h2>
-
-        <p>
-          A-T Furniture Kano is focused on providing stylish,
-          durable and modern furniture solutions for homes,
-          offices, hotels and commercial spaces.
-        </p>
-
-        <p>
-          From living-room sofas and bedroom furniture to
-          office desks, wardrobes and complete interior
-          solutions, our goal is to help customers create
-          spaces that look beautiful and feel comfortable.
-        </p>
-
-
-        <div class="check-grid">
-
-          <div class="check">
-            <strong>✓ Modern Designs</strong>
-            <span>Contemporary furniture styles.</span>
-          </div>
-
-          <div class="check">
-            <strong>✓ Quality Focus</strong>
-            <span>Designed for comfort and durability.</span>
-          </div>
-
-          <div class="check">
-            <strong>✓ Custom Solutions</strong>
-            <span>Furniture concepts for different spaces.</span>
-          </div>
-
-          <div class="check">
-            <strong>✓ Customer Support</strong>
-            <span>Easy enquiry through WhatsApp.</span>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =====================================
-       SERVICES
-  ====================================== -->
-
-  <section class="section services" id="services">
+  <div class="container">
 
     <div class="section-head">
-
-      <div class="eyebrow">
-        Our Services
-      </div>
-
-      <h2>
-        Complete Furniture Solutions
-      </h2>
-
+      <div class="eyebrow">Signature Collection</div>
+      <h2>Royal Furniture Collection</h2>
       <p>
-        Furniture and interior solutions for residential
-        and commercial spaces.
+        Elegant pieces designed to give homes and offices a luxury,
+        powerful and premium appearance.
       </p>
-
     </div>
 
+    <div class="feature-grid">
 
-    <div class="service-grid">
-
-      <div class="service">
-
-        <div class="service-icon">
-          🛋
-        </div>
-
-        <h3>
-          Living Room Furniture
-        </h3>
-
-        <p>
-          Sofas, centre tables, TV units, side tables,
-          lounge chairs and complete living-room concepts.
-        </p>
-
-      </div>
-
-
-      <div class="service">
-
-        <div class="service-icon">
-          🛏
-        </div>
-
-        <h3>
-          Bedroom Furniture
-        </h3>
-
-        <p>
-          Beds, wardrobes, dressing tables, bedside tables
-          and complete bedroom furniture.
-        </p>
-
-      </div>
-
-
-      <div class="service">
-
-        <div class="service-icon">
-          🏢
-        </div>
-
-        <h3>
-          Office Furniture
-        </h3>
-
-        <p>
-          Executive desks, office chairs, reception furniture,
-          cabinets and meeting-room solutions.
-        </p>
-
-      </div>
-
-
-      <div class="service">
-
-        <div class="service-icon">
-          🍽
-        </div>
-
-        <h3>
-          Dining Furniture
-        </h3>
-
-        <p>
-          Dining tables, dining chairs and complete dining
-          room furniture collections.
-        </p>
-
-      </div>
-
-
-      <div class="service">
-
-        <div class="service-icon">
-          📺
-        </div>
-
-        <h3>
-          TV & Entertainment
-        </h3>
-
-        <p>
-          Modern TV consoles, wall units, media cabinets
-          and entertainment furniture.
-        </p>
-
-      </div>
-
-
-      <div class="service">
-
-        <div class="service-icon">
-          ✨
-        </div>
-
-        <h3>
-          Interior Solutions
-        </h3>
-
-        <p>
-          Furniture concepts designed to complement modern
-          interior spaces.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =====================================
-       GALLERY
-  ====================================== -->
-
-  <section class="section" id="gallery">
-
-    <div class="section-head">
-
-      <div class="eyebrow">
-        Inspiration
-      </div>
-
-      <h2>
-        Beautiful Spaces Start Here
-      </h2>
-
-      <p>
-        Explore furniture styles and interior inspiration.
-      </p>
-
-    </div>
-
-
-    <div class="gallery-grid">
-
-      <div class="gallery-item">
+      <div class="feature-card">
 
         <img
-          src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1400&q=90"
-          alt="Luxury sofa"
-          loading="lazy"
-        >
+          src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1000&q=85"
+          alt="Royal Interior">
+
+        <div class="feature-content">
+          <h3>Royal Living Room</h3>
+          <p>
+            Deep luxury sofas, accent chairs, centre tables and premium
+            colour combinations.
+          </p>
+        </div>
 
       </div>
 
-
-      <div class="gallery-item">
+      <div class="feature-card">
 
         <img
-          src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1000&q=90"
-          alt="Modern bedroom"
-          loading="lazy"
-        >
+          src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1000&q=85"
+          alt="Luxury Bedroom">
 
-      </div>
-
-
-      <div class="gallery-item">
-
-        <img
-          src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1000&q=90"
-          alt="Luxury interior"
-          loading="lazy"
-        >
-
-      </div>
-
-
-      <div class="gallery-item">
-
-        <img
-          src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1000&q=90"
-          alt="Living room"
-          loading="lazy"
-        >
-
-      </div>
-
-
-      <div class="gallery-item">
-
-        <img
-          src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1000&q=90"
-          alt="Interior furniture"
-          loading="lazy"
-        >
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =====================================
-       WHY US
-  ====================================== -->
-
-  <section class="section why">
-
-    <div class="section-head">
-
-      <div class="eyebrow" style="color:#d4af37">
-        Why Choose A-T
-      </div>
-
-      <h2>
-        Built Around Quality & Style
-      </h2>
-
-      <p>
-        Furniture should not only look good. It should
-        improve the way you use your space.
-      </p>
-
-    </div>
-
-
-    <div class="why-grid">
-
-      <div class="why-card">
-
-        <div class="why-number">
-          01
+        <div class="feature-content">
+          <h3>Royal Bedroom</h3>
+          <p>
+            Premium beds, headboards, side tables and wardrobes for a
+            complete bedroom setup.
+          </p>
         </div>
-
-        <h3>
-          Modern Designs
-        </h3>
-
-        <p>
-          Carefully selected furniture styles for modern
-          homes, offices and commercial spaces.
-        </p>
-
-      </div>
-
-
-      <div class="why-card">
-
-        <div class="why-number">
-          02
-        </div>
-
-        <h3>
-          Comfort First
-        </h3>
-
-        <p>
-          Furniture concepts designed around comfort,
-          usability and everyday living.
-        </p>
-
-      </div>
-
-
-      <div class="why-card">
-
-        <div class="why-number">
-          03
-        </div>
-
-        <h3>
-          Professional Service
-        </h3>
-
-        <p>
-          Simple communication and direct customer enquiry
-          through WhatsApp.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =====================================
-       TESTIMONIALS
-  ====================================== -->
-
-  <section class="section">
-
-    <div class="section-head">
-
-      <div class="eyebrow">
-        Customer Experience
-      </div>
-
-      <h2>
-        What Our Customers Say
-      </h2>
-
-      <p>
-        Replace these sample reviews with verified A-T
-        Furniture customer testimonials.
-      </p>
-
-    </div>
-
-
-    <div class="testimonials">
-
-      <div class="testimonial">
-
-        <div class="stars">
-          ★★★★★
-        </div>
-
-        <p>
-          “The furniture design gave our living room a
-          completely new appearance.”
-        </p>
-
-        <strong>
-          Happy Customer
-        </strong>
-
-        <br>
-
-        <small>
-          Kano
-        </small>
-
-      </div>
-
-
-      <div class="testimonial">
-
-        <div class="stars">
-          ★★★★★
-        </div>
-
-        <p>
-          “Professional-looking furniture and a beautiful
-          finish. I really liked the final result.”
-        </p>
-
-        <strong>
-          Happy Customer
-        </strong>
-
-        <br>
-
-        <small>
-          Kano
-        </small>
-
-      </div>
-
-
-      <div class="testimonial">
-
-        <div class="stars">
-          ★★★★★
-        </div>
-
-        <p>
-          “The catalogue made it very easy to find the type
-          of furniture I wanted.”
-        </p>
-
-        <strong>
-          Happy Customer
-        </strong>
-
-        <br>
-
-        <small>
-          Kano
-        </small>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =====================================
-       CTA
-  ====================================== -->
-
-  <section class="cta">
-
-    <h2>
-      Ready To Transform Your Space?
-    </h2>
-
-    <p>
-      Browse our furniture collection and contact A-T
-      Furniture directly for your next furniture project.
-    </p>
-
-    <a
-      href="https://wa.me/2348038898410?text=Hello%20A-T%20Furniture%20Kano,%20I%20want%20to%20discuss%20a%20furniture%20project."
-      target="_blank"
-      class="btn btn-gold"
-    >
-      Start Your Enquiry →
-    </a>
-
-  </section>
-
-
-  <!-- =====================================
-       FAQ
-  ====================================== -->
-
-  <section class="section">
-
-    <div class="section-head">
-
-      <div class="eyebrow">
-        FAQ
-      </div>
-
-      <h2>
-        Frequently Asked Questions
-      </h2>
-
-    </div>
-
-
-    <div class="faq">
-
-      <details>
-
-        <summary>
-          What types of furniture do you offer?
-        </summary>
-
-        <p>
-          Our catalogue covers sofas, beds, wardrobes,
-          dining furniture, office furniture, TV units,
-          chairs, tables and outdoor furniture.
-        </p>
-
-      </details>
-
-
-      <details>
-
-        <summary>
-          Can I enquire about a particular design?
-        </summary>
-
-        <p>
-          Yes. Open any product in the catalogue and use
-          the WhatsApp enquiry button to ask about it.
-        </p>
-
-      </details>
-
-
-      <details>
-
-        <summary>
-          Can furniture be customized?
-        </summary>
-
-        <p>
-          Customization can be discussed directly with
-          A-T Furniture depending on the furniture type
-          and project requirements.
-        </p>
-
-      </details>
-
-
-      <details>
-
-        <summary>
-          Do you handle office furniture?
-        </summary>
-
-        <p>
-          Yes. The website includes an office furniture
-          category covering desks, chairs, cabinets and
-          other office concepts.
-        </p>
-
-      </details>
-
-
-      <details>
-
-        <summary>
-          How do I place an enquiry?
-        </summary>
-
-        <p>
-          Select a furniture design, click View, then
-          contact A-T Furniture through WhatsApp.
-        </p>
-
-      </details>
-
-    </div>
-
-  </section>
-
-
-  <!-- =====================================
-       CONTACT
-  ====================================== -->
-
-  <section class="section contact" id="contact">
-
-    <div class="contact-grid">
-
-      <div class="contact-content">
-
-        <div class="eyebrow">
-          Contact A-T Furniture
-        </div>
-
-        <h2>
-          Let's Build Your
-          Perfect Space.
-        </h2>
-
-        <p>
-          Tell us what type of furniture you need and
-          contact us directly for more information.
-        </p>
-
-
-        <div class="contact-item">
-
-          <span>
-            Phone / WhatsApp
-          </span>
-
-          <strong>
-            +234 803 889 8410
-          </strong>
-
-        </div>
-
-
-        <div class="contact-item">
-
-          <span>
-            Location
-          </span>
-
-          <strong>
-            Kano, Nigeria
-          </strong>
-
-        </div>
-
-
-        <div class="contact-item">
-
-          <span>
-            Business
-          </span>
-
-          <strong>
-            A-T Furniture Kano
-          </strong>
-
-        </div>
-
-      </div>
-
-
-      <form class="contact-form" id="contactForm">
-
-        <h3>
-          Send An Enquiry
-        </h3>
-
-
-        <div class="form-group">
-
-          <label>
-            Your Name
-          </label>
-
-          <input
-            type="text"
-            id="customerName"
-            placeholder="Enter your name"
-            required
-          >
-
-        </div>
-
-
-        <div class="form-group">
-
-          <label>
-            Phone Number
-          </label>
-
-          <input
-            type="tel"
-            id="customerPhone"
-            placeholder="Your phone number"
-            required
-          >
-
-        </div>
-
-
-        <div class="form-group">
-
-          <label>
-            Furniture Type
-          </label>
-
-          <select id="customerCategory">
-
-            <option>
-              General Enquiry
-            </option>
-
-            <option>
-              Sofa
-            </option>
-
-            <option>
-              Bed
-            </option>
-
-            <option>
-              Wardrobe
-            </option>
-
-            <option>
-              Dining Furniture
-            </option>
-
-            <option>
-              Office Furniture
-            </option>
-
-            <option>
-              TV Unit
-            </option>
-
-            <option>
-              Custom Furniture
-            </option>
-
-          </select>
-
-        </div>
-
-
-        <div class="form-group">
-
-          <label>
-            Message
-          </label>
-
-          <textarea
-            id="customerMessage"
-            placeholder="Tell us what furniture you need..."
-            required
-          ></textarea>
-
-        </div>
-
-
-        <button
-          type="submit"
-          class="submit-btn"
-        >
-          Send Enquiry on WhatsApp →
-
-        </button>
-
-      </form>
-
-    </div>
-
-  </section>
-
-
-  <!-- =====================================
-       FOOTER
-  ====================================== -->
-
-  <footer>
-
-    <div class="footer-grid">
-
-      <div>
-
-        <div class="brand" style="margin-bottom:15px;">
-
-          <div class="brand-logo">
-            AT
-          </div>
-
-          <div class="brand-text">
-            <strong>
-              A-T FURNITURE
-            </strong>
-
-            <span>
-              KANO • INTERIORS
-            </span>
-          </div>
-
-        </div>
-
-        <p>
-          Premium furniture and interior solutions
-          for modern spaces.
-        </p>
-
-      </div>
-
-
-      <div>
-
-        <h3>
-          Quick Links
-        </h3>
-
-        <a href="#home">
-          Home
-        </a>
-
-        <a href="#catalogue">
-          Catalogue
-        </a>
-
-        <a href="#about">
-          About
-        </a>
-
-        <a href="#services">
-          Services
-        </a>
-
-      </div>
-
-
-      <div>
-
-        <h3>
-          Furniture
-        </h3>
-
-        <a href="#catalogue">
-          Sofas
-        </a>
-
-        <a href="#catalogue">
-          Beds
-        </a>
-
-        <a href="#catalogue">
-          Wardrobes
-        </a>
-
-        <a href="#catalogue">
-          Office Furniture
-        </a>
-
-      </div>
-
-
-      <div>
-
-        <h3>
-          Contact
-        </h3>
-
-        <a href="tel:+2348038898410">
-          +234 803 889 8410
-        </a>
-
-        <a
-          href="https://wa.me/2348038898410"
-          target="_blank"
-        >
-          WhatsApp
-        </a>
-
-        <a href="#contact">
-          Send Enquiry
-        </a>
-
-      </div>
-
-    </div>
-
-
-    <div class="copyright">
-
-      <span>
-        © 2026 A-T Furniture Kano. All rights reserved.
-      </span>
-
-      <span>
-        Furniture • Interiors • Quality
-      </span>
-
-    </div>
-
-  </footer>
-
-
-  <!-- =====================================
-       FLOATING WHATSAPP
-  ====================================== -->
-
-  <a
-    href="https://wa.me/2348038898410?text=Hello%20A-T%20Furniture%20Kano,%20I%20am%20interested%20in%20your%20furniture."
-    target="_blank"
-    class="whatsapp"
-    aria-label="WhatsApp A-T Furniture"
-  >
-    ☎
-  </a>
-
-
-  <!-- =====================================
-       PRODUCT MODAL
-  ====================================== -->
-
-  <div class="modal" id="productModal">
-
-    <div class="modal-box">
-
-      <button
-        class="close-modal"
-        id="closeModal"
-      >
-        ×
-      </button>
-
-
-      <div class="modal-image">
-
-        <img
-          id="modalImage"
-          src=""
-          alt=""
-        >
-
-      </div>
-
-
-      <div class="modal-info">
-
-        <small id="modalCategory"></small>
-
-        <h2 id="modalTitle"></h2>
-
-        <strong
-          id="modalPrice"
-          style="
-            display:block;
-            font-size:18px;
-            margin:12px 0;
-          "
-        ></strong>
-
-        <p id="modalDescription"></p>
-
-
-        <a
-          href="#"
-          target="_blank"
-          id="modalWhatsapp"
-          class="btn btn-gold"
-          style="width:100%;"
-        >
-          Enquire on WhatsApp →
-        </a>
 
       </div>
 
@@ -2442,897 +1425,1471 @@
 
   </div>
 
+</section>
 
-  <!-- =====================================
-       JAVASCRIPT
-  ====================================== -->
-
-  <script>
-
-    /*
-      =========================================
-      A-T FURNITURE
-      LARGE CATALOGUE ENGINE
-      =========================================
-    */
-
-    const WHATSAPP = "2348038898410";
-
-
-    /*
-      Base furniture categories.
-      The system generates 2,000+ catalogue
-      combinations from these designs.
-    */
-
-    const baseFurniture = [
-
-      {
-        category: "sofa",
-        names: [
-          "Royal Luxury Sofa",
-          "Modern Velvet Sofa",
-          "Executive Sofa",
-          "Classic Lounge Sofa",
-          "Premium Corner Sofa",
-          "Royal Corner Sofa",
-          "Luxury Family Sofa",
-          "Modern L-Shape Sofa",
-          "Elite Living Room Sofa",
-          "Signature Sofa"
-        ],
-        images: [
-          "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1000&q=85",
-          "https://images.unsplash.com/photo-1550226891-ef816aed4a98?auto=format&fit=crop&w=1000&q=85",
-          "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1000&q=85"
-        ]
-      },
-
-      {
-        category: "bed",
-        names: [
-          "Royal King Bed",
-          "Luxury Upholstered Bed",
-          "Modern King Bed",
-          "Executive Bed",
-          "Classic Bedroom Bed",
-          "Premium Queen Bed",
-          "Royal Platform Bed",
-          "Modern Storage Bed",
-          "Signature Bed",
-          "Luxury Master Bed"
-        ],
-        images: [
-          "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1000&q=85",
-          "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1000&q=85",
-          "https://images.unsplash.com/photo-1615874694520-474822394e73?auto=format&fit=crop&w=1000&q=85"
-        ]
-      },
-
-      {
-        category: "wardrobe",
-        names: [
-          "Premium Sliding Wardrobe",
-          "Modern Executive Wardrobe",
-          "Luxury 4-Door Wardrobe",
-          "Classic Wooden Wardrobe",
-          "Modern Bedroom Wardrobe",
-          "Royal Wardrobe",
-          "Elegant Storage Wardrobe",
-          "Premium Mirror Wardrobe",
-          "Signature Wardrobe",
-          "Luxury Closet"
-        ],
-        images: [
-          "https://images.unsplash.com/photo-1558997519-83ea9252edf8?auto=format&fit=crop&w=1000&q=85",
-          "https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=1000&q=85",
-          "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1000&q=85"
-        ]
-      },
-
-      {
-        category: "dining",
-        names: [
-          "Royal Dining Set",
-          "Luxury Dining Table",
-          "Modern Family Dining",
-          "Classic Dining Set",
-          "Premium 6-Seater Dining",
-          "Executive Dining Set",
-          "Modern Glass Dining",
-          "Wooden Dining Collection",
-          "Signature Dining Set",
-          "Luxury 8-Seater Dining"
-        ],
-        images: [
-          "https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=1000&q=85",
-          "https://images.unsplash.com/photo-1604578762246-41134e37f9cc?auto=format&fit=crop&w=1000&q=85",
-          "https://images.unsplash.com/photo-1615529162924-f8605388461d?auto=format&fit=crop&w=1000&q=85"
-        ]
-      },
-
-      {
-        category: "office",
-        names: [
-          "Executive Office Desk",
-          "Modern Office Desk",
-          "CEO Office Table",
-          "Luxury Executive Desk",
-          "Professional Workstation",
-          "Manager Office Desk",
-          "Reception Desk",
-          "Conference Table",
-          "Premium Office Workstation",
-          "Director Office Set"
-        ],
-        images: [
-          "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1000&q=85",
-          "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85",
-          "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1000&q=85"
-        ]
-      },
-
-      {
-        category: "tv",
-        names: [
-          "Modern TV Console",
-          "Luxury TV Wall Unit",
-          "Floating TV Stand",
-          "Premium Entertainment Unit",
-          "Classic TV Cabinet",
-          "Modern Media Wall",
-          "Executive TV Console",
-          "Royal TV Unit",
-          "Minimal TV Stand",
-          "Signature TV Wall"
-        ],
-        images: [
-          "https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=1000&q=85",
-          "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=1000&q=85",
-          "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85"
-        ]
-      },
-
-      {
-        category: "chair",
-        names: [
-          "Luxury Lounge Chair",
-          "Modern Accent Chair",
-          "Executive Office Chair",
-          "Royal Armchair",
-          "Classic Dining Chair",
-          "Premium Recliner",
-          "Modern Lounge Chair",
-          "Signature Accent Chair",
-          "Executive Guest Chair",
-          "Luxury Reading Chair"
-        ],
-        images: [
-          "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1000&q=85",
-          "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=1000&q=85",
-          "https://images.unsplash.com/photo-1540574163026-643ea20ade25?auto=format&fit=crop&w=1000&q=85"
-        ]
-      },
-
-      {
-        category: "table",
-        names: [
-          "Luxury Centre Table",
-          "Modern Coffee Table",
-          "Royal Centre Table",
-          "Premium Side Table",
-          "Classic Wooden Table",
-          "Modern Console Table",
-          "Executive Side Table",
-          "Glass Centre Table",
-          "Signature Coffee Table",
-          "Luxury Console"
-        ],
-        images: [
-          "https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?auto=format&fit=crop&w=1000&q=85",
-          "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1000&q=85",
-          "https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1000&q=85"
-        ]
-      },
-
-      {
-        category: "outdoor",
-        names: [
-          "Premium Outdoor Sofa",
-          "Garden Lounge Set",
-          "Modern Patio Chair",
-          "Luxury Outdoor Set",
-          "Poolside Lounge",
-          "Outdoor Dining Set",
-          "Classic Garden Furniture",
-          "Premium Balcony Set",
-          "Modern Patio Sofa",
-          "Signature Outdoor Collection"
-        ],
-        images: [
-          "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85",
-          "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85",
-          "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=85"
-        ]
-      }
-
-    ];
-
-
-    /*
-      Variations create a large catalogue.
-    */
-
-    const styles = [
-      "Classic",
-      "Modern",
-      "Premium",
-      "Luxury",
-      "Royal",
-      "Elegant",
-      "Executive",
-      "Signature",
-      "Contemporary",
-      "Elite",
-      "Minimal",
-      "Designer"
-    ];
-
-
-    const finishes = [
-      "Gold Finish",
-      "Dark Wood",
-      "Natural Wood",
-      "Walnut Finish",
-      "Matte Black",
-      "White Finish",
-      "Cream Finish",
-      "Luxury Fabric",
-      "Velvet Finish",
-      "Premium Wood"
-    ];
-
-
-    const colours = [
-      "Black",
-      "White",
-      "Cream",
-      "Brown",
-      "Grey",
-      "Beige",
-      "Gold",
-      "Green",
-      "Navy",
-      "Wine",
-      "Charcoal",
-      "Oak"
-    ];
-
-
-    /*
-      Generate 2,000+ furniture products.
-    */
-
-    const products = [];
-
-    let productId = 1;
-
-
-    for (let i = 0; i < 2050; i++) {
-
-      const base =
-        baseFurniture[
-          i % baseFurniture.length
-        ];
-
-      const baseName =
-        base.names[
-          Math.floor(
-            i / baseFurniture.length
-          ) % base.names.length
-        ];
-
-      const style =
-        styles[
-          Math.floor(
-            i / 3
-          ) % styles.length
-        ];
-
-      const finish =
-        finishes[
-          Math.floor(
-            i / 7
-          ) % finishes.length
-        ];
-
-      const colour =
-        colours[
-          Math.floor(
-            i / 11
-          ) % colours.length
-        ];
-
-      const image =
-        base.images[
-          i % base.images.length
-        ];
-
-      products.push({
-
-        id: productId++,
-
-        category: base.category,
-
-        name:
-          `${style} ${baseName} ${i + 1}`,
-
-        colour,
-
-        finish,
-
-        image,
-
-        price:
-          "Contact for Price",
-
-        description:
-          `${style} ${baseName.toLowerCase()} in ${colour.toLowerCase()} with ${finish.toLowerCase()}. Contact A-T Furniture for availability, dimensions, customization and current price.`
-
-      });
-
-    }
-
-
-    /*
-      CATEGORY LABELS
-    */
-
-    const categoryNames = {
-
-      sofa: "Sofas",
-
-      bed: "Beds",
-
-      wardrobe: "Wardrobes",
-
-      dining: "Dining",
-
-      office: "Office",
-
-      tv: "TV Units",
-
-      chair: "Chairs",
-
-      table: "Tables",
-
-      outdoor: "Outdoor"
-
-    };
-
-
-    /*
-      DOM
-    */
-
-    const productsContainer =
-      document.getElementById("products");
-
-    const searchInput =
-      document.getElementById("searchInput");
-
-    const sortSelect =
-      document.getElementById("sortSelect");
-
-    const resultCount =
-      document.getElementById("resultCount");
-
-
-    let currentCategory = "all";
-
-
-    /*
-      RENDER PRODUCTS
-    */
-
-    function renderProducts() {
-
-      const search =
-        searchInput.value
-          .toLowerCase()
-          .trim();
-
-
-      let filtered =
-        products.filter(product => {
-
-          const categoryMatch =
-            currentCategory === "all" ||
-            product.category === currentCategory;
-
-
-          const searchMatch =
-            !search ||
-
-            product.name
-              .toLowerCase()
-              .includes(search) ||
-
-            product.colour
-              .toLowerCase()
-              .includes(search) ||
-
-            product.finish
-              .toLowerCase()
-              .includes(search) ||
-
-            product.category
-              .toLowerCase()
-              .includes(search);
-
-
-          return categoryMatch && searchMatch;
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+  <div class="container about-grid">
+
+    <div class="about-image">
+
+      <img
+        src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?auto=format&fit=crop&w=1000&q=85"
+        alt="Premium Furniture">
+
+    </div>
+
+    <div class="about-text">
+
+      <div class="eyebrow">About A-T Furniture Kano</div>
+
+      <h2>We Build Furniture That Looks Expensive.</h2>
+
+      <p>
+        A-T Furniture Kano focuses on premium furniture designs,
+        beautiful finishing and custom furniture concepts for homes,
+        offices, hotels and modern interior spaces.
+      </p>
+
+      <p>
+        From royal chairs and royal beds to sofas, wardrobes, dining
+        furniture and office furniture, customers can request designs
+        according to their preferred size, colour and finishing.
+      </p>
+
+      <div class="check-list">
+
+        <div class="check">
+          <b>✓</b>
+          <span>Royal & modern furniture designs</span>
+        </div>
+
+        <div class="check">
+          <b>✓</b>
+          <span>Custom colours and finishing</span>
+        </div>
+
+        <div class="check">
+          <b>✓</b>
+          <span>Home, office and commercial furniture</span>
+        </div>
+
+        <div class="check">
+          <b>✓</b>
+          <span>Direct WhatsApp customer enquiries</span>
+        </div>
+
+      </div>
+
+      <a
+        href="https://wa.me/2348038898410?text=Assalamu%20Alaikum%2C%20I%20want%20a%20custom%20furniture%20design."
+        target="_blank"
+        class="btn btn-primary">
+        Request Custom Design
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= SERVICES ================= -->
+
+<section id="services" style="background:#101010;">
+
+  <div class="container">
+
+    <div class="section-head">
+      <div class="eyebrow">What We Do</div>
+      <h2>Furniture & Interior Services</h2>
+      <p>
+        More than furniture — we help create complete premium spaces.
+      </p>
+    </div>
+
+    <div class="service-grid">
+
+      <div class="service">
+        <div class="service-icon">👑</div>
+        <h3>Royal Chairs</h3>
+        <p>
+          Different royal chair shapes, upholstery styles, arm designs
+          and premium colour combinations.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="service-icon">🛏️</div>
+        <h3>Royal Beds</h3>
+        <p>
+          Luxury beds and custom headboards in different modern and
+          royal designs.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="service-icon">🛋️</div>
+        <h3>Luxury Sofas</h3>
+        <p>
+          Modern, classic, L-shape, U-shape and royal sofa concepts.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="service-icon">🚪</div>
+        <h3>Wardrobes</h3>
+        <p>
+          Modern wardrobes with different door patterns, colours and
+          interior arrangements.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="service-icon">🍽️</div>
+        <h3>Dining Sets</h3>
+        <p>
+          Elegant dining tables and chairs for homes, restaurants and
+          hospitality spaces.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="service-icon">💼</div>
+        <h3>Office Furniture</h3>
+        <p>
+          Executive desks, office chairs, meeting tables and storage
+          furniture.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= WHY US ================= -->
+
+<section class="why">
+
+  <div class="container">
+
+    <div class="section-head">
+      <div class="eyebrow">Why Choose Us</div>
+      <h2>Built For Customers Who Want More.</h2>
+    </div>
+
+    <div class="why-grid">
+
+      <div class="why-card">
+        <strong>01 — Royal Designs</strong>
+        <p>
+          Premium furniture concepts with elegant shapes and finishing.
+        </p>
+      </div>
+
+      <div class="why-card">
+        <strong>02 — Custom Colours</strong>
+        <p>
+          Choose Ash, White, Dark Yellow/Gold and other colour
+          combinations.
+        </p>
+      </div>
+
+      <div class="why-card">
+        <strong>03 — Custom Size</strong>
+        <p>
+          Furniture can be designed around your room and preferred
+          dimensions.
+        </p>
+      </div>
+
+      <div class="why-card">
+        <strong>04 — Easy Enquiry</strong>
+        <p>
+          Select a design and contact A-T Furniture directly through
+          WhatsApp.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+  <div class="container">
+
+    <div class="cta-box">
+
+      <h2>Have A Furniture Design In Mind?</h2>
+
+      <p>
+        Send us your preferred design, colour, size or even a picture
+        of the furniture you want. Let's discuss your custom order.
+      </p>
+
+      <a
+        class="btn btn-primary"
+        target="_blank"
+        href="https://wa.me/2348038898410?text=Assalamu%20Alaikum%20A-T%20Furniture%20Kano%2C%20I%20have%20a%20custom%20furniture%20design%20I%20want%20to discuss.">
+        Chat On WhatsApp
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+  <div class="container">
+
+    <div class="section-head">
+      <div class="eyebrow">Contact A-T Furniture</div>
+      <h2>Let's Build Your Perfect Furniture.</h2>
+      <p>
+        Send an enquiry and our team can discuss your preferred design.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-card">
+
+        <h3>Business Information</h3>
+
+        <div class="contact-item">
+          <div class="icon">📱</div>
+          <div>
+            <span>Phone / WhatsApp</span>
+            <strong>08038898410</strong>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="icon">✉️</div>
+          <div>
+            <span>Email</span>
+            <strong>abubakartabuke3@gmail.com</strong>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="icon">📍</div>
+          <div>
+            <span>Location</span>
+            <strong>Kano, Nigeria</strong>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="icon">🪑</div>
+          <div>
+            <span>Speciality</span>
+            <strong>Royal & Custom Furniture</strong>
+          </div>
+        </div>
+
+        <a
+          class="btn btn-primary"
+          style="width:100%;margin-top:10px;"
+          target="_blank"
+          href="https://wa.me/2348038898410">
+          Open WhatsApp
+        </a>
+
+      </div>
+
+      <div class="contact-card">
+
+        <h3>Send An Enquiry</h3>
+
+        <form id="contactForm">
+
+          <input
+            id="name"
+            type="text"
+            placeholder="Your Name"
+            required
+          >
+
+          <input
+            id="phone"
+            type="tel"
+            placeholder="Phone Number"
+            required
+          >
+
+          <input
+            id="interest"
+            type="text"
+            placeholder="Furniture you are interested in"
+            required
+          >
+
+          <textarea
+            id="message"
+            placeholder="Tell us the design, colour, size or quantity you need..."
+            required
+          ></textarea>
+
+          <button class="btn btn-primary" type="submit">
+            Send Enquiry On WhatsApp
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+
+        <a href="#home" class="logo">
+          <div class="logo-mark">AT</div>
+          <div>A-T <span>FURNITURE</span></div>
+        </a>
+
+        <p>
+          Premium royal furniture designs for modern homes, offices,
+          hotels and interior spaces in Kano and beyond.
+        </p>
+
+      </div>
+
+      <div class="footer-col">
+
+        <h4>Catalogue</h4>
+
+        <a href="#catalogue">Royal Chairs</a>
+        <a href="#catalogue">Royal Beds</a>
+        <a href="#catalogue">Sofas</a>
+        <a href="#catalogue">Wardrobes</a>
+
+      </div>
+
+      <div class="footer-col">
+
+        <h4>Company</h4>
+
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#categories">Categories</a>
+        <a href="#contact">Contact</a>
+
+      </div>
+
+      <div class="footer-col">
+
+        <h4>Contact</h4>
+
+        <a href="tel:+2348038898410">08038898410</a>
+        <a href="mailto:abubakartabuke3@gmail.com">
+          Email Us
+        </a>
+
+        <a
+          href="https://wa.me/2348038898410"
+          target="_blank">
+          WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © <span id="year"></span> A-T Furniture Kano. All Rights Reserved.
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- ================= WHATSAPP FLOAT ================= -->
+
+<a
+  class="whatsapp"
+  href="https://wa.me/2348038898410?text=Assalamu%20Alaikum%20A-T%20Furniture%20Kano"
+  target="_blank"
+  aria-label="WhatsApp">
+  ☎
+</a>
+
+<!-- ================= MODAL ================= -->
+
+<div class="modal" id="modal">
+
+  <div class="modal-box">
+
+    <button class="close" id="closeModal">×</button>
+
+    <div class="modal-grid">
+
+      <div class="modal-image">
+        <img id="modalImage" src="" alt="">
+      </div>
+
+      <div class="modal-content">
+
+        <div class="tag" id="modalCategory"></div>
+
+        <h2 id="modalTitle"></h2>
+
+        <p id="modalDescription"></p>
+
+        <div class="details">
+
+          <div class="detail">
+            <b>Design:</b>
+            <span id="modalDesign"></span>
+          </div>
+
+          <div class="detail">
+            <b>Colour:</b>
+            <span id="modalColor"></span>
+          </div>
+
+          <div class="detail">
+            <b>Finish:</b>
+            <span id="modalFinish"></span>
+          </div>
+
+          <div class="detail">
+            <b>Style:</b>
+            <span id="modalStyle"></span>
+          </div>
+
+          <div class="detail">
+            <b>Availability:</b>
+            Custom order / enquiry
+          </div>
+
+        </div>
+
+        <button
+          class="btn btn-primary"
+          id="modalWhatsapp"
+          style="width:100%;">
+          Enquire On WhatsApp
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div class="toast" id="toast">
+  Opening WhatsApp...
+</div>
+
+<script>
+
+/* =========================================================
+   A-T FURNITURE KANO
+   LARGE ROYAL FURNITURE CATALOGUE
+========================================================= */
+
+const WHATSAPP = "2348038898410";
+
+/* ================= CATEGORIES ================= */
+
+const categories = [
+  {
+    id:"royal-chairs",
+    name:"Royal Chairs",
+    icon:"👑",
+    description:"Luxury royal chair designs"
+  },
+  {
+    id:"royal-beds",
+    name:"Royal Beds",
+    icon:"🛏️",
+    description:"Premium royal bedroom designs"
+  },
+  {
+    id:"sofas",
+    name:"Luxury Sofas",
+    icon:"🛋️",
+    description:"Modern & royal sofas"
+  },
+  {
+    id:"wardrobes",
+    name:"Wardrobes",
+    icon:"🚪",
+    description:"Modern wardrobe designs"
+  },
+  {
+    id:"dining",
+    name:"Dining Sets",
+    icon:"🍽️",
+    description:"Dining tables & chairs"
+  },
+  {
+    id:"office",
+    name:"Office",
+    icon:"💼",
+    description:"Executive office furniture"
+  },
+  {
+    id:"tv-units",
+    name:"TV Units",
+    icon:"📺",
+    description:"Luxury TV wall units"
+  },
+  {
+    id:"tables",
+    name:"Tables",
+    icon:"🪵",
+    description:"Centre, side & console tables"
+  },
+  {
+    id:"outdoor",
+    name:"Outdoor",
+    icon:"🌿",
+    description:"Outdoor furniture"
+  },
+  {
+    id:"kids",
+    name:"Kids Furniture",
+    icon:"🧸",
+    description:"Beautiful children's furniture"
+  }
+];
+
+/* ================= DESIGN NAMES ================= */
+
+const designs = [
+
+  "Royal Crown",
+  "Imperial Classic",
+  "Majestic Gold",
+  "Palace Luxury",
+  "Royal Diamond",
+  "Crown Executive",
+  "Grand Palace",
+  "Regal Classic",
+  "Golden Empire",
+  "Royal Prestige",
+  "Luxury Crown",
+  "Elite Palace",
+  "Royal Comfort",
+  "Classic Majesty",
+  "Modern Royal",
+  "Imperial Diamond",
+  "Grand Elite",
+  "Royal Signature",
+  "Royal Heritage",
+  "Premium Majesty",
+  "Executive Royal",
+  "Royal Velvet",
+  "Luxury Empire",
+  "Golden Crown",
+  "Regal Prestige",
+  "Palace Classic",
+  "Royal Supreme",
+  "Majestic Comfort",
+  "Royal Grandeur",
+  "Elite Crown"
+
+];
+
+/* ================= STYLES ================= */
+
+const styles = [
+
+  "Classic",
+  "Modern",
+  "Contemporary",
+  "Luxury",
+  "Minimalist",
+  "Executive",
+  "Traditional",
+  "Premium",
+  "Elegant",
+  "Bold",
+  "Soft Luxury",
+  "Grand",
+  "Modern Classic",
+  "Neo Royal",
+  "European",
+  "African Luxury",
+  "Hotel Style",
+  "Palace Style"
+
+];
+
+/* ================= COLOURS ================= */
+
+const colours = [
+
+  "Ash & Gold",
+  "Dark Ash & Gold",
+  "White & Gold",
+  "Ash & White",
+  "Dark Yellow & Black",
+  "Gold & Black",
+  "White & Black",
+  "Ash & Black",
+  "Dark Yellow & White",
+  "Cream & Gold",
+  "Grey & Gold",
+  "Charcoal & Gold",
+  "White & Ash",
+  "Black & Dark Yellow",
+  "Light Ash",
+  "Dark Ash",
+  "Pure White",
+  "Royal Gold",
+  "Champagne Gold",
+  "Silver & Ash"
+
+];
+
+/* ================= FINISHES ================= */
+
+const finishes = [
+
+  "Premium Velvet",
+  "Luxury Leather",
+  "Matte Finish",
+  "Gloss Finish",
+  "Wood Grain",
+  "High Gloss",
+  "Soft Fabric",
+  "Premium Upholstery",
+  "Royal Velvet",
+  "Polished Wood",
+  "Brushed Gold",
+  "Satin Gold",
+  "Natural Wood",
+  "Dark Wood"
+
+];
+
+/* ================= IMAGE LIBRARY ================= */
+
+const images = [
+
+  "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=900&q=80",
+
+  "https://images.unsplash.com/photo-1550226891-ef816aed4a98?auto=format&fit=crop&w=900&q=80",
+
+  "https://images.unsplash.com/photo-1540574163026-643ea20ade25?auto=format&fit=crop&w=900&q=80",
+
+  "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=900&q=80",
+
+  "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=900&q=80",
+
+  "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=80",
+
+  "https://images.unsplash.com/photo-1617104678098-de229db51175?auto=format&fit=crop&w=900&q=80",
+
+  "https://images.unsplash.com/photo-1616627561950-9f746e330187?auto=format&fit=crop&w=900&q=80",
+
+  "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80",
+
+  "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80",
+
+  "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=80",
+
+  "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80",
+
+  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80",
+
+  "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80",
+
+  "https://images.unsplash.com/photo-1615874694520-474822394e73?auto=format&fit=crop&w=900&q=80",
+
+  "https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=900&q=80"
+
+];
+
+/* ================= CATEGORY BASE NAMES ================= */
+
+const categoryNames = {
+
+  "royal-chairs":[
+    "Royal Chair",
+    "Crown Chair",
+    "Imperial Chair",
+    "Palace Chair",
+    "Executive Royal Chair",
+    "Majestic Chair",
+    "Luxury Accent Chair",
+    "Royal Armchair"
+  ],
+
+  "royal-beds":[
+    "Royal Bed",
+    "Crown Bed",
+    "Imperial Bed",
+    "Palace Bed",
+    "Luxury King Bed",
+    "Majestic Bed",
+    "Royal Headboard Bed",
+    "Grand Royal Bed"
+  ],
+
+  "sofas":[
+    "Luxury Sofa",
+    "Royal Sofa",
+    "L-Shape Sofa",
+    "U-Shape Sofa",
+    "Modern Sofa",
+    "Classic Sofa",
+    "Executive Sofa",
+    "Palace Sofa"
+  ],
+
+  "wardrobes":[
+    "Royal Wardrobe",
+    "Luxury Wardrobe",
+    "Sliding Wardrobe",
+    "Executive Wardrobe",
+    "Modern Wardrobe",
+    "Classic Wardrobe",
+    "Mirror Wardrobe",
+    "Premium Wardrobe"
+  ],
+
+  "dining":[
+    "Royal Dining Set",
+    "Luxury Dining Set",
+    "Executive Dining Table",
+    "Modern Dining Set",
+    "Classic Dining Set",
+    "Palace Dining Set",
+    "Premium Dining Set",
+    "Majestic Dining Set"
+  ],
+
+  "office":[
+    "Executive Desk",
+    "Royal Office Chair",
+    "Luxury Office Set",
+    "Executive Table",
+    "Manager Desk",
+    "Director Desk",
+    "Conference Table",
+    "Premium Office Set"
+  ],
+
+  "tv-units":[
+    "Royal TV Unit",
+    "Luxury TV Wall",
+    "Modern TV Unit",
+    "Grand TV Console",
+    "Executive TV Unit",
+    "Palace TV Wall",
+    "Premium TV Console",
+    "Floating TV Unit"
+  ],
+
+  "tables":[
+    "Royal Centre Table",
+    "Luxury Centre Table",
+    "Gold Accent Table",
+    "Modern Console Table",
+    "Royal Side Table",
+    "Executive Table",
+    "Palace Centre Table",
+    "Premium Coffee Table"
+  ],
+
+  "outdoor":[
+    "Royal Outdoor Set",
+    "Luxury Garden Chair",
+    "Premium Outdoor Sofa",
+    "Modern Patio Set",
+    "Executive Outdoor Set",
+    "Royal Garden Set",
+    "Luxury Balcony Set",
+    "Premium Outdoor Chair"
+  ],
+
+  "kids":[
+    "Kids Royal Bed",
+    "Kids Study Table",
+    "Kids Wardrobe",
+    "Kids Chair",
+    "Kids Bedroom Set",
+    "Kids Storage Unit",
+    "Kids Table Set",
+    "Premium Kids Bed"
+  ]
+
+};
+
+/* ================= GENERATE PRODUCTS ================= */
+
+const products = [];
+
+let productId = 1;
+
+/*
+
+We intentionally create many combinations:
+
+category
+x base product
+x design
+x colour
+x finish
+x style
+
+This gives thousands of catalogue combinations.
+
+*/
+
+for(let c=0;c<categories.length;c++){
+
+  const category = categories[c];
+
+  const names = categoryNames[category.id];
+
+  for(let n=0;n<names.length;n++){
+
+    for(let d=0;d<designs.length;d++){
+
+      for(let co=0;co<colours.length;co++){
+
+        const finish =
+          finishes[
+            (productId + co + d) % finishes.length
+          ];
+
+        const style =
+          styles[
+            (productId + d + co) % styles.length
+          ];
+
+        const image =
+          images[
+            productId % images.length
+          ];
+
+        products.push({
+
+          id:productId,
+
+          category:category.id,
+
+          categoryName:category.name,
+
+          name:names[n],
+
+          design:designs[d],
+
+          colour:colours[co],
+
+          finish:finish,
+
+          style:style,
+
+          image:image
 
         });
 
-
-      /*
-        SORT
-      */
-
-      if (sortSelect.value === "az") {
-
-        filtered.sort((a,b) =>
-          a.name.localeCompare(b.name)
-        );
-
-      }
-
-
-      if (sortSelect.value === "za") {
-
-        filtered.sort((a,b) =>
-          b.name.localeCompare(a.name)
-        );
-
-      }
-
-
-      resultCount.textContent =
-        filtered.length.toLocaleString();
-
-
-      productsContainer.innerHTML = "";
-
-
-      /*
-        Display first 100 results at a time
-        for performance.
-      */
-
-      const display =
-        filtered.slice(0,100);
-
-
-      display.forEach(product => {
-
-        const card =
-          document.createElement("article");
-
-        card.className =
-          "product-card";
-
-
-        card.innerHTML = `
-
-          <div class="product-img">
-
-            <img
-              src="${product.image}"
-              alt="${product.name}"
-              loading="lazy"
-            >
-
-            <span class="product-badge">
-              ${categoryNames[product.category]}
-            </span>
-
-          </div>
-
-
-          <div class="product-content">
-
-            <small>
-              A-T COLLECTION
-            </small>
-
-            <h3>
-              ${product.name}
-            </h3>
-
-            <p>
-              ${product.colour} •
-              ${product.finish}
-            </p>
-
-
-            <div class="product-bottom">
-
-              <span class="product-price">
-                ${product.price}
-              </span>
-
-              <button
-                class="view-product"
-                onclick="openProduct(${product.id})"
-              >
-                VIEW
-              </button>
-
-            </div>
-
-          </div>
-
-        `;
-
-
-        productsContainer.appendChild(card);
-
-      });
-
-
-      if (filtered.length > 100) {
-
-        const notice =
-          document.createElement("div");
-
-        notice.style.gridColumn =
-          "1 / -1";
-
-        notice.style.textAlign =
-          "center";
-
-        notice.style.padding =
-          "25px";
-
-        notice.style.color =
-          "#777";
-
-        notice.innerHTML = `
-          Showing the first
-          <strong>100</strong>
-          results from
-          <strong>${filtered.length.toLocaleString()}</strong>
-          matching designs.
-          Use search or category filters to find more.
-        `;
-
-        productsContainer.appendChild(notice);
-
-      }
-
-
-      if (!filtered.length) {
-
-        productsContainer.innerHTML = `
-
-          <div style="
-            grid-column:1/-1;
-            text-align:center;
-            padding:70px 20px;
-          ">
-
-            <h3>
-              No furniture found
-            </h3>
-
-            <p style="
-              color:#777;
-              margin-top:7px;
-            ">
-              Try another search or category.
-            </p>
-
-          </div>
-
-        `;
+        productId++;
 
       }
 
     }
 
+  }
 
-    /*
-      INITIAL RENDER
-    */
+}
+
+/* ================= LIMIT / DISPLAY ================= */
+
+let activeCategory = "all";
+let searchTerm = "";
+let sortMode = "default";
+let visibleCount = 40;
+
+/* ================= CATEGORY UI ================= */
+
+const categoryGrid =
+  document.getElementById("categoryGrid");
+
+categoryGrid.innerHTML = categories.map(cat => `
+
+  <div class="category"
+       onclick="selectCategory('${cat.id}')">
+
+    <div class="category-icon">
+      ${cat.icon}
+    </div>
+
+    <strong>${cat.name}</strong>
+
+    <small>${cat.description}</small>
+
+  </div>
+
+`).join("");
+
+/* ================= FILTERS ================= */
+
+const filters =
+  document.getElementById("filters");
+
+filters.innerHTML = `
+
+  <button
+    class="active"
+    onclick="selectCategory('all',this)">
+    All Designs
+  </button>
+
+  ${categories.map(cat => `
+
+    <button
+      onclick="selectCategory('${cat.id}',this)">
+      ${cat.name}
+    </button>
+
+  `).join("")}
+
+`;
+
+/* ================= FILTER FUNCTION ================= */
+
+function selectCategory(category,button){
+
+  activeCategory = category;
+
+  visibleCount = 40;
+
+  if(button){
+
+    document.querySelectorAll(
+      "#filters button"
+    ).forEach(btn =>
+      btn.classList.remove("active")
+    );
+
+    button.classList.add("active");
+
+  }else{
+
+    document.querySelectorAll(
+      "#filters button"
+    ).forEach(btn =>
+      btn.classList.remove("active")
+    );
+
+    const buttons =
+      document.querySelectorAll(
+        "#filters button"
+      );
+
+    buttons.forEach(btn => {
+
+      if(
+        category === "all" &&
+        btn.textContent.includes("All Designs")
+      ){
+        btn.classList.add("active");
+      }
+
+      if(
+        category !== "all" &&
+        btn.textContent.trim() ===
+        categories.find(c=>c.id===category)?.name
+      ){
+        btn.classList.add("active");
+      }
+
+    });
+
+  }
+
+  renderProducts();
+
+  document.getElementById("catalogue")
+    .scrollIntoView({
+      behavior:"smooth"
+    });
+}
+
+/* ================= SEARCH ================= */
+
+document
+  .getElementById("searchInput")
+  .addEventListener("input",function(){
+
+    searchTerm =
+      this.value.toLowerCase().trim();
+
+    visibleCount = 40;
 
     renderProducts();
 
+  });
 
-    /*
-      SEARCH
-    */
+/* ================= SORT ================= */
 
-    searchInput.addEventListener(
-      "input",
-      renderProducts
+document
+  .getElementById("sortSelect")
+  .addEventListener("change",function(){
+
+    sortMode = this.value;
+
+    renderProducts();
+
+  });
+
+/* ================= GET FILTERED ================= */
+
+function getFilteredProducts(){
+
+  let result = products.filter(product => {
+
+    const categoryMatch =
+      activeCategory === "all" ||
+      product.category === activeCategory;
+
+    const searchMatch =
+      !searchTerm ||
+
+      product.name
+        .toLowerCase()
+        .includes(searchTerm) ||
+
+      product.design
+        .toLowerCase()
+        .includes(searchTerm) ||
+
+      product.colour
+        .toLowerCase()
+        .includes(searchTerm) ||
+
+      product.finish
+        .toLowerCase()
+        .includes(searchTerm) ||
+
+      product.style
+        .toLowerCase()
+        .includes(searchTerm) ||
+
+      product.categoryName
+        .toLowerCase()
+        .includes(searchTerm);
+
+    return categoryMatch && searchMatch;
+
+  });
+
+  if(sortMode === "az"){
+
+    result.sort((a,b)=>
+      a.name.localeCompare(b.name)
     );
 
+  }
 
-    /*
-      SORT
-    */
+  if(sortMode === "za"){
 
-    sortSelect.addEventListener(
-      "change",
-      renderProducts
+    result.sort((a,b)=>
+      b.name.localeCompare(a.name)
     );
 
+  }
 
-    /*
-      CATEGORY FILTER
-    */
+  if(sortMode === "category"){
+
+    result.sort((a,b)=>
+      a.categoryName.localeCompare(
+        b.categoryName
+      )
+    );
+
+  }
+
+  return result;
+}
+
+/* ================= RENDER ================= */
+
+function renderProducts(){
+
+  const container =
+    document.getElementById("products");
+
+  const result =
+    getFilteredProducts();
+
+  const display =
+    result.slice(0,visibleCount);
+
+  document.getElementById("resultText")
+    .textContent =
+      `${result.length.toLocaleString()} designs found`;
+
+  container.innerHTML =
+    display.map(product => productCard(product)).join("");
+
+  const loadMore =
+    document.getElementById("loadMore");
+
+  if(visibleCount >= result.length){
+
+    loadMore.style.display = "none";
+
+  }else{
+
+    loadMore.style.display = "block";
+
+  }
+
+}
+
+/* ================= PRODUCT CARD ================= */
+
+function productCard(product){
+
+  const safeName =
+    escapeHTML(product.name);
+
+  const safeDesign =
+    escapeHTML(product.design);
+
+  const safeColour =
+    escapeHTML(product.colour);
+
+  return `
+
+    <article class="product">
+
+      <div class="product-image">
+
+        <img
+          src="${product.image}"
+          alt="${safeName} ${safeDesign}"
+          loading="lazy">
+
+        <div class="product-badge">
+          ${product.categoryName}
+        </div>
+
+        <div class="product-number">
+          #${String(product.id).padStart(4,"0")}
+        </div>
+
+      </div>
+
+      <div class="product-body">
+
+        <div class="product-category">
+          ${safeDesign}
+        </div>
+
+        <h3>
+          ${safeName}
+        </h3>
+
+        <p>
+          ${safeColour} • ${product.finish}
+        </p>
+
+        <div class="product-meta">
+
+          <span>
+            <span class="color-dot"></span>
+            ${safeColour}
+          </span>
+
+          <span>
+            ${product.style}
+          </span>
+
+        </div>
+
+        <div class="product-actions">
+
+          <button
+            onclick="viewProduct(${product.id})">
+            View
+          </button>
+
+          <button
+            class="wa"
+            onclick="whatsappProduct(${product.id})">
+            WhatsApp
+          </button>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  `;
+
+}
+
+/* ================= VIEW PRODUCT ================= */
+
+function viewProduct(id){
+
+  const product =
+    products.find(p=>p.id===id);
+
+  if(!product)return;
+
+  document.getElementById("modalImage")
+    .src = product.image;
+
+  document.getElementById("modalImage")
+    .alt = product.name;
+
+  document.getElementById("modalCategory")
+    .textContent = product.categoryName;
+
+  document.getElementById("modalTitle")
+    .textContent =
+      `${product.design} ${product.name}`;
+
+  document.getElementById("modalDescription")
+    .textContent =
+      `Premium ${product.name.toLowerCase()} featuring ${product.design} design, ${product.colour} colour combination and ${product.finish.toLowerCase()} finishing.`;
+
+  document.getElementById("modalDesign")
+    .textContent = product.design;
+
+  document.getElementById("modalColor")
+    .textContent = product.colour;
+
+  document.getElementById("modalFinish")
+    .textContent = product.finish;
+
+  document.getElementById("modalStyle")
+    .textContent = product.style;
+
+  document.getElementById("modalWhatsapp")
+    .onclick = () =>
+      whatsappProduct(product.id);
+
+  document
+    .getElementById("modal")
+    .classList.add("show");
+
+}
+
+/* ================= WHATSAPP ================= */
+
+function whatsappProduct(id){
+
+  const product =
+    products.find(p=>p.id===id);
+
+  if(!product)return;
+
+  const message =
+`Assalamu Alaikum A-T Furniture Kano,
+
+I am interested in this furniture design:
+
+Design: ${product.design}
+Product: ${product.name}
+Category: ${product.categoryName}
+Colour: ${product.colour}
+Finish: ${product.finish}
+Style: ${product.style}
+Catalogue No: #${product.id}
+
+Please send me the current price, available size and more details.
+
+Thank you.`;
+
+  const url =
+    `https://wa.me/${WHATSAPP}?text=${
+      encodeURIComponent(message)
+    }`;
+
+  showToast();
+
+  window.open(url,"_blank");
+
+}
+
+/* ================= MODAL CLOSE ================= */
+
+document
+  .getElementById("closeModal")
+  .onclick = () => {
 
     document
-      .querySelectorAll(".category-btn")
-      .forEach(button => {
+      .getElementById("modal")
+      .classList.remove("show");
 
-        button.addEventListener(
-          "click",
-          () => {
+  };
 
-            document
-              .querySelectorAll(".category-btn")
-              .forEach(btn =>
-                btn.classList.remove("active")
-              );
+document
+  .getElementById("modal")
+  .addEventListener("click",function(e){
 
+    if(e.target === this){
 
-            button.classList.add("active");
-
-
-            currentCategory =
-              button.dataset.category;
-
-
-            renderProducts();
-
-          }
-        );
-
-      });
-
-
-    /*
-      PRODUCT MODAL
-    */
-
-    const modal =
-      document.getElementById("productModal");
-
-    const modalImage =
-      document.getElementById("modalImage");
-
-    const modalTitle =
-      document.getElementById("modalTitle");
-
-    const modalCategory =
-      document.getElementById("modalCategory");
-
-    const modalPrice =
-      document.getElementById("modalPrice");
-
-    const modalDescription =
-      document.getElementById("modalDescription");
-
-    const modalWhatsapp =
-      document.getElementById("modalWhatsapp");
-
-
-    function openProduct(id) {
-
-      const product =
-        products.find(
-          item => item.id === id
-        );
-
-
-      if (!product) return;
-
-
-      modalImage.src =
-        product.image;
-
-      modalImage.alt =
-        product.name;
-
-
-      modalTitle.textContent =
-        product.name;
-
-
-      modalCategory.textContent =
-        categoryNames[product.category];
-
-
-      modalPrice.textContent =
-        product.price;
-
-
-      modalDescription.textContent =
-        product.description;
-
-
-      const message =
-        `Hello A-T Furniture Kano,%0A%0A` +
-        `I am interested in:%0A` +
-        `${encodeURIComponent(product.name)}%0A%0A` +
-        `Category: ${encodeURIComponent(categoryNames[product.category])}%0A` +
-        `Colour: ${encodeURIComponent(product.colour)}%0A` +
-        `Finish: ${encodeURIComponent(product.finish)}%0A%0A` +
-        `Please send me the current price and availability.`;
-
-
-      modalWhatsapp.href =
-        `https://wa.me/${WHATSAPP}?text=${message}`;
-
-
-      modal.classList.add("show");
-
-      document.body.style.overflow =
-        "hidden";
+      this.classList.remove("show");
 
     }
 
+  });
 
-    window.openProduct =
-      openProduct;
+/* ================= LOAD MORE ================= */
 
+document
+  .getElementById("loadMore")
+  .onclick = () => {
 
-    /*
-      CLOSE MODAL
-    */
+    visibleCount += 40;
 
-    document
-      .getElementById("closeModal")
-      .addEventListener(
-        "click",
-        closeModal
-      );
+    renderProducts();
 
+  };
 
-    modal.addEventListener(
-      "click",
-      event => {
+/* ================= CONTACT FORM ================= */
 
-        if (event.target === modal) {
-          closeModal();
-        }
+document
+  .getElementById("contactForm")
+  .addEventListener("submit",function(e){
 
-      }
-    );
+    e.preventDefault();
 
+    const name =
+      document.getElementById("name").value.trim();
 
-    document.addEventListener(
-      "keydown",
-      event => {
+    const phone =
+      document.getElementById("phone").value.trim();
 
-        if (event.key === "Escape") {
-          closeModal();
-        }
+    const interest =
+      document.getElementById("interest").value.trim();
 
-      }
-    );
+    const message =
+      document.getElementById("message").value.trim();
 
+    const text =
+`Assalamu Alaikum A-T Furniture Kano,
 
-    function closeModal() {
+I want to make a furniture enquiry.
 
-      modal.classList.remove("show");
+Name: ${name}
+Phone: ${phone}
+Furniture: ${interest}
 
-      document.body.style.overflow =
-        "";
+Message:
+${message}
 
-    }
+Please send me the available designs and current price.
 
+Thank you.`;
 
-    /*
-      MOBILE NAVIGATION
-    */
+    const url =
+      `https://wa.me/${WHATSAPP}?text=${
+        encodeURIComponent(text)
+      }`;
 
-    const menuBtn =
-      document.getElementById("menuBtn");
+    window.open(url,"_blank");
 
-    const navLinks =
-      document.getElementById("navLinks");
+  });
 
+/* ================= MOBILE MENU ================= */
 
-    menuBtn.addEventListener(
-      "click",
-      () => {
-
-        navLinks.classList.toggle(
-          "show"
-        );
-
-      }
-    );
-
+document
+  .getElementById("menuBtn")
+  .addEventListener("click",function(){
 
     document
-      .querySelectorAll(".nav-links a")
-      .forEach(link => {
+      .getElementById("navLinks")
+      .classList.toggle("open");
 
-        link.addEventListener(
-          "click",
-          () => {
+  });
 
-            navLinks.classList.remove(
-              "show"
-            );
+document
+  .querySelectorAll(".nav-links a")
+  .forEach(link => {
 
-          }
-        );
+    link.addEventListener("click",()=>{
 
-      });
+      document
+        .getElementById("navLinks")
+        .classList.remove("open");
 
+    });
 
-    /*
-      CONTACT FORM → WHATSAPP
-    */
+  });
 
-    document
-      .getElementById("contactForm")
-      .addEventListener(
-        "submit",
-        function(event) {
+/* ================= TOAST ================= */
 
-          event.preventDefault();
+function showToast(){
 
+  const toast =
+    document.getElementById("toast");
 
-          const name =
-            document
-              .getElementById("customerName")
-              .value
-              .trim();
+  toast.classList.add("show");
 
+  setTimeout(()=>{
 
-          const phone =
-            document
-              .getElementById("customerPhone")
-              .value
-              .trim();
+    toast.classList.remove("show");
 
+  },1800);
 
-          const category =
-            document
-              .getElementById("customerCategory")
-              .value;
+}
 
+/* ================= ESCAPE HTML ================= */
 
-          const message =
-            document
-              .getElementById("customerMessage")
-              .value
-              .trim();
+function escapeHTML(value){
 
+  return String(value)
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#039;");
 
-          const text =
-            `Hello A-T Furniture Kano,%0A%0A` +
-            `Name: ${encodeURIComponent(name)}%0A` +
-            `Phone: ${encodeURIComponent(phone)}%0A` +
-            `Furniture Type: ${encodeURIComponent(category)}%0A%0A` +
-            `Message:%0A${encodeURIComponent(message)}`;
+}
 
+/* ================= YEAR ================= */
 
-          window.open(
-            `https://wa.me/${WHATSAPP}?text=${text}`,
-            "_blank"
-          );
+document
+  .getElementById("year")
+  .textContent =
+    new Date().getFullYear();
 
-        }
-      );
+/* ================= START ================= */
 
-  </script>
+renderProducts();
+
+</script>
 
 </body>
 </html>
