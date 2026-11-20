@@ -2893,3 +2893,99 @@ renderProducts();
 
 </body>
 </html>
+const crypto = require("crypto");
+
+module.exports = async function handler(req, res) {
+  const BASE_URL = "https://a-t-furniture-kano.vercel.app";
+  const REDIRECT_URI = `${BASE_URL}/api/tiktok`;
+
+  const action = req.query.action || "connect";
+
+  // 1. FARA HAƊA TIKTOK
+  if (action === "connect") {
+    const state = crypto.randomBytes(24).toString("hex");
+
+    res.setHeader("Set-Cookie",
+      `tiktok_state=${state}; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=600`
+    );
+
+    const params = new URLSearchParams({
+      client_key: process.env.TIKTOK_CLIENT_KEY,
+      response_type: "code",
+      scope: "user.info.basic,video.publish",
+      redirect_uri: REDIRECT_URI,
+      state: state
+    });
+
+    return res.redirect(
+      `https://www.tiktok.com/v2/auth/authorize/?${params.toString()}`
+    );
+  }
+
+  // 2. KARƁAR AMSAR TIKTOK
+  if (action === "callback") {
+    const cookies = Object.fromEntries(
+      (req.headers.cookie || "")
+        .split("; ")
+        .filter(Boolean)
+        .map(item => {
+          const i = item.indexOf("=");
+          return [item.slice(0, i), item.slice(i + 1)];
+        })
+    );
+
+    const { code, state, error } = req.query;
+
+    if (error || !code || !state ||
+        state !== cookies.tiktok_state) {
+      return res.status(400).send("TikTok connection failed.");
+    }
+
+    try {
+      const body = new URLSearchParams({
+        client_key: process.env.TIKTOK_CLIENT_KEY,
+        client_secret: process.env.TIKTOK_CLIENT_SECRET,
+        code: code,
+        grant_type: "authorization_code",
+        redirect_uri: REDIRECT_URI
+      });
+
+      const response = await fetch(
+        "https://open.tiktokapis.com/v2/oauth/token/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          body: body
+        }
+      );
+
+      const result = await response.json();
+
+      if (!response.ok || result.error) {
+        return res.status(400).json({
+          message: "TikTok authorization failed",
+          details: result
+        });
+      }
+
+      return res.status(200).send(`
+        <html>
+          <head><title>A-T Furniture Kano</title></head>
+          <body style="background:#080808;color:#D4AF37;text-align:center;padding:50px;font-family:Arial">
+            <h1>A-T FURNITURE KANO</h1>
+            <h2>TikTok Authorization Successful!</h2>
+            <p>Next step: secure token storage and automatic video publishing.</p>
+            <a href="${BASE_URL}" style="color:white">Back to Website</a>
+          </body>
+        </html>
+      `);
+
+    } catch (err) {
+      return res.status(500).send("Server error. Please try again.");
+    }
+  }
+
+  return res.status(404).send("Invalid request.");
+};
